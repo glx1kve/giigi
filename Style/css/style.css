@@ -4,7 +4,7 @@
 
 body {
   /* Местоположение фоновой картинки */
-  background-image: url(../images/White_background++.png);
+  background-image: url(../images/White_background.png);
   /* Фоновое изображение выровнено по центру в горизонтальной и вертикальной плоскостях */
   background-position: center center;
   /* Фон не повторяется */
