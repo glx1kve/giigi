@@ -5,80 +5,375 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style/css/start.css">
-    <link rel="stylesheet" href="Style/css/start-arrow-btn.css">
-    <link href='https://fonts.googleapis.com/css?family=Raleway:400,500,300' rel='stylesheet' type='text/css'>
-    <title>Вхід</title>
+    <title>Головна сторінка</title>
+    <link rel="shortcut icon" href="images/Logo.png">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/scroll_bar.css">
+    <link rel="stylesheet" href="css/tnx.css">
+    <link rel="stylesheet" href="css/index_reg_btn.css">
+    <link rel="stylesheet" href="css/btn_log_reg.css">
+    <link rel="stylesheet" href="css/log_reg_form.css">
+    <link rel="stylesheet" href="css/dropdown_lg.css">
+    <link rel="stylesheet" href="/css/nav_menu.css">
 </head>
 
 <body>
+    <div class="wrapper">
+        <!-- <div class="switch-btn"></div>
+    <div class="switch-btn switch-on"></div> -->
+        <header class="header">
+            <div class="header__container">
+                <div class="header__body">
 
-    <div id="mainButton">
-        <div class="btn-text" onclick="openForm()">Click me</div>
-        <div class="modal">
-            <div class="close-button" onclick="closeForm()">x</div>
-            <div class="form-title">GIIGI</div>
-            <div class="input-group">
-                <input type="text" id="name" onblur="checkInput(this)" />
-                <label for="name">Username</label>
+                    <a href="#" class="header__logo">
+                        <img src="images/Logo.png" alt="Logo" width="80">
+                    </a>
+                    <div class="header__burger" onclick="clickMenu()">
+                        <span></span>
+
+                    </div>
+                    <!-- <nav class="navMenu">
+                        <div class="dot"></div>
+                    </nav> -->
+                    <nav class="header__menu">
+
+                        <!-- Block head -->
+                        <ul class="header__list">
+                            <nav class="navMenu">
+                                <li>
+
+                                    <a href="#" id="lg_features" class="underline-one">Особливості</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="lg_sub" class="underline-one">Підписки</a>
+
+                                </li>
+                                <li>
+                                    <a href="#" class="underline-one">FAQs</a>
+
+                                </li>
+                                <li>
+                                    <a href="#" id="lg_about" class="underline-one">Про нас</a>
+
+                                </li>
+                            </nav>
+                            <!-- <li>
+                                <div class="switch navig-buttons">
+                                    <div id="lg_theme" class="switch-text">Switch theme</div>
+                                    <label class="switch-btn">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </li> -->
+                            <li>
+                                <a href="creators.html">
+                                    <div class="button-container-2">
+                                        <span id="lg_creators1" class="mas">Творці</span>
+                                        <button id='work1' type="button" name="Hover" role="button"><span
+                                                id="lg_creators2">Творці</span></button>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <div class="button-container-3">
+                                    <span id="lg_thanks1" class="mas">Дякую!</span>
+                                    <button id='work1' class="modal-button" type="button" name="Hover"
+                                        role="button"><span id="lg_thanks2">Дякую!</span></button>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="button-container-1"><a href="#popup">
+                                        <span id="lg_plunge1" class="mas">Поринути в GIIGI</span>
+                                        <button id='work2' class="modal-logreg" type="button" name="Hover"
+                                            role="button"><span id="lg_plunge2">Поринути в GIIGI</span></button></a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="dropdown">
+                                    <input type="checkbox" id="dropdown">
+
+                                    <label class="dropdown__face" for="dropdown">
+                                        <div id="lg_lang" class="dropdown__text">Мова</div>
+
+                                        <div class="dropdown__arrow"></div>
+                                    </label>
+
+                                    <ul class="dropdown__items">
+                                        <li><a href="#ua" class="lang-btn" onclick="Rload()">УКР</a></li>
+                                        <li><a href="#en" class="lang-btn" onclick="Rload()">ENG</a></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+
+                                <svg>
+                                    <filter id="goo">
+                                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                                        <feColorMatrix in="blur" type="matrix"
+                                            values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+                                        <feBlend in="SourceGraphic" in2="goo" />
+                                    </filter>
+                                </svg>
+                            </li>
+
+
+                        </ul>
+                        <div class="switch__lang__mobile">
+                            <a href="#ua" class="lang-btn" onclick="Rload()">УКР</a>
+                            <a href="#en" class="lang-btn" onclick="Rload()">ENG</a>
+                        </div>
+                    </nav>
+
+                </div>
             </div>
-            <div class="input-group">
-                <input type="password" id="password" onblur="checkInput(this)" />
-                <label for="password">Password</label>
+            <div class="header__line"></div>
+        </header>
+
+        <div class="background">
+            <div class="background__container">
+                <div class="row">
+                    <div class="short">
+                        <img src="images/Logo-info.png" alt="Logo" width="550">
+                        <h6 id="lg_logo">Логотип компанії GIIGI</h6><br>
+                        <p id="lg_left_text">
+                            &nbsp;&nbsp;&nbsp;&nbsp;Логотип складається з абревіатури GIIGI, яка має повну назву
+                            «Generic
+                            Insurrection in Game Industry». Звучить доволі пафосно, але ж не потрібно приховувати правду
+                            від
+                            поціновувачів. Абревіатура обрамлена, що символізує кордони, в межах яких функціонує
+                            компанія.
+                            Також
+                            на логотипі є фонове зображення, яке використовується виключно в маркетингових цілях та
+                            символізує
+                            безкордрнний та фантастичний космос, прямо таки як ми xD. Ще в лівому нижньому куті є
+                            символ,
+                            який
+                            посилається на колись відомий в минулому клан BOTW.
+                        </p>
+                    </div>
+                    <div class="content">
+                        <p id="lg_right_text">
+                            Компінія GIIGI займається розробкою кросплатфомових ігор в різних жанрах. Головною
+                            спеціалізацією є
+                            ігри жанру футбольного симулятора. Та впринципі усьо.
+                        </p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus illo deserunt perferendis
+                            id
+                            eveniet dolore. Dolorem magnam perferendis, suscipit tenetur asperiores eum. Distinctio
+                            nulla
+                            velit possimus omnis ipsum et necessitatibus. Excepturi laboriosam vero similique?
+                            Exercitationem iusto, consequuntur quod fugiat non id earum eum, saepe facilis esse
+                            veritatis
+                            quam magni architecto necessitatibus aspernatur voluptatum? Cumque aspernatur nulla tempora
+                            quae
+                            veritatis ratione. Illo recusandae, a commodi eos quod quo neque praesentium itaque sit
+                            voluptas
+                            quidem dicta voluptatum, facere distinctio, repellat ducimus. Quibusdam aut, nam sit quae
+                            incidunt voluptate cupiditate inventore iusto itaque fugiat temporibus vitae, consequatur
+                            dolores cumque dolore recusandae voluptates obcaecati magni! Possimus odio facilis cum
+                            doloremque doloribus harum? Officiis consequuntur delectus debitis saepe reprehenderit, eius
+                            sed
+                            magnam ad natus blanditiis inventore alias voluptates esse ipsum officia ducimus quisquam
+                            voluptatibus cumque id porro ullam perferendis fuga minus laudantium?</p>
+                    </div>
+                </div>
             </div>
-            <div class="form-button" onclick="sign()">Go</div>
-            <div class="codepen-by">Generic Insurrection in Game Industry</div>
+        </div>
 
 
+        <footer class="footer">
+            <div class="row">
+                <div class="left-footer">
+                    <p id="lg_street">м. Київ, вул. \_(-_-)_/, 00000</p>
+                    +38(012)-345-67-89
+                    <br><br>
+                    &copy; GIIGI
+                </div>
+
+                <div class="right-footer">
+                    #standwithukraine
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Tnx form -->
+    <!-- <div class="tnx_container"></div> -->
+    <div class="modal">
+        <div class="modal-tnx_container">
+            <div class="modal-left">
+                <h1 id="lg_tnx_welcome" class="modal-title">Ласкаво просимо!</h1><br>
+                <p id="lg_tnx_text" class="modal-desc" style="text-align: justify;">Ми раді, що ви обираєте нашу
+                    платформу, і ми зробимо все від нас можливе, щоб надати вам лише позитивні емоції.</p>
+                <p id="lg_tnx_text2">
+                    А тепер ви можете приєднатися до нас!
+                </p>
+                <!-- <div class="input-block">
+                    <label for="email" class="input-label">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+                <div class="input-block">
+                    <label for="password" class="input-label">Password</label>
+                    <input type="password" name="password" id="password" placeholder="Password">
+                </div>
+                <div class="modal-buttons">
+                    <a href="" class="">Forgot your password?</a>
+                    <button class="input-button">Login</button>
+                </div> -->
 
 
+                <!-- Button for login / registration -->
+                <div class="btn-log-reg">
+                    <a href="index.html" id="lg_tnx_go_btn" class="animated-button1">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Вперед!
+                    </a>
+                </div>
+
+                <p class="c-name">Generic Insurrection in Game Industry</a></p>
+            </div>
+            <div class="modal-right">
+                <img src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=dfd2ec5a01006fd8c4d7592a381d3776&auto=format&fit=crop&w=1000&q=80"
+                    alt="">
+            </div>
+            <button class="icon-button close-button">
+                <img src="/images/close_button.ico" width="28">
+                <path
+                    d="M 25 3 C 12.86158 3 3 12.86158 3 25 C 3 37.13842 12.86158 47 25 47 C 37.13842 47 47 37.13842 47 25 C 47 12.86158 37.13842 3 25 3 z M 25 5 C 36.05754 5 45 13.94246 45 25 C 45 36.05754 36.05754 45 25 45 C 13.94246 45 5 36.05754 5 25 C 5 13.94246 13.94246 5 25 5 z M 16.990234 15.990234 A 1.0001 1.0001 0 0 0 16.292969 17.707031 L 23.585938 25 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 25 26.414062 L 32.292969 33.707031 A 1.0001 1.0001 0 1 0 33.707031 32.292969 L 26.414062 25 L 33.707031 17.707031 A 1.0001 1.0001 0 0 0 32.980469 15.990234 A 1.0001 1.0001 0 0 0 32.292969 16.292969 L 25 23.585938 L 17.707031 16.292969 A 1.0001 1.0001 0 0 0 16.990234 15.990234 z">
+                </path>
+                </svg>
+            </button>
         </div>
     </div>
-    <div class="codepen-by">Generic Insurrection in Game Industry</div>
 
 
 
 
 
-    <script>
-        var button = document.getElementById('mainButton');
+    <!-- Registration form -->
+    <!-- <div id="popup">
+        <a href="#" class="popup_area"></a>
+        <div class="popup_body">
+            <div class="popup_content">
+                <div class="container" id="container">
+                    <div class="form-container sign-up-container">
+                        <form action="#">
+                            <h1>Create Account</h1>
+                            <div class="social-container">
+                                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                            <span>or use your email for registration</span>
+                            <input type="text" placeholder="Name" />
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password" />
+                            <button>Sign Up</button>
+                        </form>
+                    </div>
+                    <div class="form-container sign-in-container">
+                        <form action="#">
+                            <h1>Sign in</h1>
+                            <div class="social-container">
+                                <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                            <span>or use your account</span>
+                            <input type="email" placeholder="Email" />
+                            <input type="password" placeholder="Password" />
+                            <a href="#">Forgot your password?</a>
+                            <button>Sign In</button>
+                        </form>
+                    </div>
+                    <div class="overlay-container">
+                        <div class="overlay">
+                            <div class="overlay-panel overlay-left">
+                                <h1>Welcome Back!</h1>
+                                <p>To keep connected with us please login with your personal info</p>
+                                <button class="ghost" id="signIn">Sign In</button>
+                            </div>
+                            <div class="overlay-panel overlay-right">
+                                <h1>Hello, Friend!</h1>
+                                <p>Enter your personal details and start journey with us</p>
+                                <button class="ghost" id="signUp">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
 
 
-        var openForm = function () {
-            button.className = 'active';
-        };
 
-        var checkInput = function (input) {
-            if (input.value.length > 0) {
-                input.className = 'active';
-            } else {
-                input.className = '';
-            }
-        };
 
-        var closeForm = function () {
-            button.className = '';
-        };
 
-        document.addEventListener("keyup", function (e) {
-            if (e.keyCode == 27 || e.keyCode == 13) {
-                closeForm();
-            }
-        });
 
-        function sign() {
-            var login = document.getElementById('name').value;
-            var password = document.getElementById('password').value;
 
-            if (login == 'admin' && password == '123') {
-                location.replace("main.html");
-            }
-            else {
-                alert("Something went wrong -_- ");
-            }
-        }
-    </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+
+    <div id="popup1" class="popup">
+        <a href="#" class="popup_area"></a>
+        <div class="popup_body">
+            <div class="popup_content">
+                <a href="#" class="popup_close">x</a>
+                <div class="popup_title">Реєстрація</div>
+                <div class="popup_text">
+                    <div class="register">
+                        <form method="POST" action="add_info.php">
+                            Введіть логін &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="login_reg"
+                                name="login_reg" placeholder="Введіть логін"><br>
+                            Введіть пароль &nbsp;&nbsp;&nbsp;&nbsp;<input type="password" id="psswrd1" name="psswrd1"
+                                placeholder="Введіть пароль"><br>
+                            Повторіть пароль <input type="password" id="psswrd2" name="psswrd2"
+                                placeholder="Підтвертіть пароль"><br>
+                            <div class="button">
+                                <center><input type="submit" class="add-btn" id="submit_reg" name="submit_reg"
+                                        value="Зареєструватися"></center>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Switch theme -->
+
+
+
+
+
+
+    <!-- Change bg theme -->
+
+
+
+    <script src="/scripts/tnx.js"></script>
+    <script src="/scripts/log_reg_form.js"></script>
+    <script src="scripts/lang.js"></script>
+    <script src="/scripts/menu_burger.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

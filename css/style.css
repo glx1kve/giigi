@@ -1,0 +1,655 @@
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  /* Местоположение фоновой картинки */
+  background-image: url(../images/White_background.png);
+  /* Фоновое изображение выровнено по центру в горизонтальной и вертикальной плоскостях */
+  background-position: center center;
+  /* Фон не повторяется */
+  background-repeat: no-repeat;
+  /* Фон зафиксирован в области просмотра и потому не двигается, когда высота контента превышает высоту изображения */
+  background-attachment: fixed;
+  /* Это свойство заставляет фон менять масштаб при изменении размеров содержащего его контейнера*/
+  background-size: cover;
+  /* Цвет фона, который будет отображаться при загрузке фоновой картинки
+    background-color: #464646;*/
+
+  /*background: url(images/White_background.png) center center cover no-repeat fixed;*/
+
+
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+@media only screen and (max-width: 767px) {
+
+  html,
+  body {
+    background-image: none;
+
+    /* Здесь размер файла уменьшен на 93% чтобы  увеличить скорость загрузки страницы с мобильных устройств */
+    background-image: url(../images/White_background_mobile.png);
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Для вирівнювання content і sidebar */
+.row:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+.row {
+  display: inline-block;
+}
+
+/* start commented backslash hack \*/
+* html .row {
+  height: 1%;
+}
+
+.row {
+  display: block;
+}
+
+/* close commented backslash hack */
+
+
+
+/*Header*/
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  /* height: 80px; */
+  /* background-color: rgb(255, 255, 255); */
+}
+
+.header__line {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 5px;
+  transition: all 0.5s ease 0s;
+  position: absolute;
+  background: linear-gradient(90deg, rgba(246, 29, 29, 0.8), rgba(255, 255, 0, 0.8), rgba(188, 40, 211, 0.8), rgba(172, 255, 47, 0.8), rgba(172, 255, 47, 0.8), rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8), rgba(246, 29, 29, 0.8));
+
+  /* animation: ticker 30s linear infinite; */
+  animation: gradient 30s ease infinite;
+  animation-direction: alternate;
+  /* animation-play-state: paused; */
+
+  background-size: 400% 440%;
+  height: 1vh;
+  /* width: 100vw; */
+}
+
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%
+  }
+
+  50% {
+    background-position: 100% 50%
+  }
+
+  100% {
+    background-position: 0% 50%
+  }
+}
+
+/* @keyframes ticker {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-100%, 0);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+} */
+
+.header:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  z-index: 2;
+  /* height: 70px; */
+}
+
+.header__body {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 58px;
+  align-items: center;
+  transition: all 0.5s ease 0s;
+  margin-top: 15px;
+  /* height: 60px; */
+}
+
+.header__logo {
+  flex: 0 0 80px;
+  margin: 0px auto auto 10px;
+  float: left;
+  /* width: 80px; */
+  margin-left: 15px;
+  position: relative;
+  z-index: 3;
+  /* background-color: red; */
+  /* border-radius: 50%; */
+  /* overflow: hidden; */
+}
+
+.header__logo img {
+  /*якщо картинка буде більшою, то щоб підлаштувалася рід вказаний вище розмір*/
+  max-width: 100%;
+  /*якщо при border-radius: 50% незрозумілий відступ на лого*/
+  display: block;
+}
+
+
+
+.header__burger {
+  display: none;
+}
+
+/* .header__menu {} */
+
+
+.header__list {
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+
+.header__list li {
+  list-style: none;
+  margin-left: 10px;
+}
+
+
+@media (max-width: 1440px) {
+  .header__list {
+    left: -0.1%;
+  }
+}
+
+
+/* @media (max-width: 767px) { */
+@media (max-width: 1134px) {
+
+  body.lock {
+    overflow: hidden;
+  }
+
+  .header__line {
+    top: 50px;
+    transition: all 0.5s ease 0s;
+  }
+
+  .header__body {
+    height: 38px;
+    transition: all 0.5s ease 0s;
+  }
+
+  .header__logo {
+    flex: 0 0 55px;
+  }
+
+  .header__burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+    margin-right: 10px;
+  }
+
+  .header__burger span {
+    position: absolute;
+    background-color: black;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    top: -3px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header__burger:before,
+  .header__burger:after {
+    content: '';
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    left: 0;
+    transition: all 0.3s ease 0s;
+  }
+
+  .header__burger:before {
+    top: -12px;
+  }
+
+  .header__burger.act span {
+    transform: scale(0);
+  }
+
+  .header__burger:after {
+    bottom: 12px;
+  }
+
+  .header__burger.act:before {
+    transform: rotate(45deg);
+    top: -4px;
+  }
+
+  .header__burger.act:after {
+    transform: rotate(-45deg);
+    bottom: 22px;
+  }
+
+  .header__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding: 80px 0px 0px 0px;
+    transition: all 0.3s ease 0s;
+
+    background: linear-gradient(-45deg, rgba(255, 255, 0, 0.95), rgba(24, 244, 160, 0.95), rgba(0, 255, 255, 0.95));
+
+    /* animation: ticker 30s linear infinite; */
+    animation: gradient 30s ease infinite;
+    animation-direction: alternate;
+    /* animation-play-state: paused; */
+
+    background-size: 1000% 1000%;
+    height: 100vh;
+    /* width: 100vw; */
+  }
+
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%
+    }
+
+    50% {
+      background-position: 100% 50%
+    }
+
+    100% {
+      background-position: 0% 50%
+    }
+  }
+
+
+  .header__menu.act {
+    top: 0;
+  }
+
+  .header__list {
+    display: block;
+  }
+
+  .header__list li {
+    margin: 0px 0px 5px 0px;
+  }
+}
+
+
+
+
+
+
+.switch {
+  /* background: green; */
+  text-align: center;
+  height: 40px;
+  border: 2.5px solid #DFDEDE;
+  border-radius: 30px;
+  padding: 0 10px 0 10px;
+  display: inline-block;
+}
+
+.switch:hover {
+  border-color: #BFDEFF;
+  transition: all 0.8s ease 0s;
+}
+
+.switch-text {
+  display: inline-block;
+  text-align: justify;
+}
+
+.dropdown {
+  /* padding: 0px 20px; */
+  /* background: #000; */
+  /* float: right; */
+  margin-right: 20px;
+}
+
+.dropdown__text {
+  color: black;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.dropdown__items li a {
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.lang-btn {
+  color: black;
+  position: relative;
+}
+
+.lang-btn:hover {
+  color: rgb(0, 119, 255);
+  top: -1.3px;
+  font-weight: bold;
+  /* background: rgba(0, 0, 0, 0.75); */
+}
+
+
+.search {
+  float: left;
+  width: 250px;
+}
+
+
+/*Main content*/
+
+.background {
+  flex: 1 1 auto;
+  /* height: 500px; */
+  margin: 100px 100px auto 100px;
+  background-color: rgb(255, 255, 255, 0.5);
+  border-radius: 15px;
+  color: black;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.background__container {
+  /* max-width: 1180px; */
+  margin: 0px auto;
+  padding: 0px 10px;
+}
+
+.short {
+  float: left;
+  margin: 10px;
+  padding-left: 20px;
+  width: 38%;
+  /* background-color: aliceblue; */
+}
+
+.short h6 {
+  text-align: center;
+  font-weight: bold;
+}
+
+.short p {
+  text-align: justify;
+}
+
+.content {
+  float: right;
+  margin: 10px;
+  margin-top: 150px;
+  padding-right: 20px;
+  width: 58%;
+  text-align: justify;
+  /* background-color: bisque; */
+}
+
+@media (max-width: 767px) {
+  .background {
+    padding: 0px 0px 0px 0px;
+  }
+}
+
+/*Footer*/
+
+.footer {
+  margin-top: 100px;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, .85);
+  color: white;
+  bottom: 0;
+}
+
+.left-footer {
+  float: left;
+  width: 50%;
+}
+
+.right-footer {
+  float: right;
+  width: 50%;
+  text-align: right;
+  margin-top: 80px;
+}
+
+
+
+
+.switch__lang__mobile a {
+  margin-left: 10px;
+  text-decoration: none;
+  visibility: hidden;
+  position: absolute;
+}
+
+/*media for lang switcher*/
+@media (max-width: 1134px) {
+
+  .dropdown {
+    display: none;
+  }
+
+  .switch__lang__mobile a {
+    visibility: visible;
+    position: relative;
+  }
+
+  .switch__lang__mobile {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+  }
+
+}
+
+
+
+
+/*Register*/
+
+.popup {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0, 0.6);
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: all 0.8s ease 0s;
+}
+
+.popup:target {
+  /*.popuo:target --> .popup.open*/
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup:target .popup_content {
+  transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
+  /* transform: translate(0px, 0px); */
+  opacity: 1;
+}
+
+.popup_area {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.popup_body {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px, 10px;
+  /*зверху/знизу по 30, справа/зліва по 10 відступи*/
+}
+
+.popup_content {
+  border-radius: 15px;
+  border: 3px solid #2940D3;
+  background-image: url(bg_reg.jpg);
+  color: #fff;
+  max-width: 800px;
+  padding: 30px;
+  position: relative;
+  transition: all 0.8s ease 0s;
+  opacity: 0;
+  /* transform: translate(0px, -100%); */
+  text-shadow: black 1px 1px 0, black -1px -1px 0,
+    black -1px 1px 0, black 1px -1px 0;
+}
+
+.popup_close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.popup_title {
+  text-align: center;
+  font-size: 40px;
+  margin: 0px, 0px, 1em, 0px;
+}
+
+.popup_text {
+  font-size: 18px;
+  padding: 10px;
+}
+
+
+
+
+/*Switch theme maybe*/
+/*Button*/
+
+/* The switch - the box around the slider */
+.switch-btn {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 22px;
+  margin-top: 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch-btn input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
