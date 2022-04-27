@@ -1,0 +1,247 @@
+html,
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+.preloader {
+    background-color: var(--preloader);
+}
+
+.loader {
+    color: var(--preloader_c);
+}
+
+.header::before {
+    background-color: var(--header_before);
+}
+
+.background {
+    background-color: var(--background);
+    color: var(--background_c);
+}
+
+.footer {
+    background: var(--footer);
+    color: var(--footer_c);
+}
+
+
+
+
+
+.navMenu a {
+    color: var(--navMenu);
+}
+
+.navMenu a:hover {
+    color: var(--navMenu_h);
+}
+
+.underline-one:after {
+    /*after*/
+    background-color: var(--underline_after);
+}
+
+.underline-one:hover:after {
+    /*before*/
+    background-color: var(--underline_before);
+}
+
+
+
+
+
+/* .button-container-1{} */
+.button-container-1 button {
+    background: var(--button_container);
+    color: var(--button_container_c);
+}
+
+.button-container-2 {
+    border-color: var(--border_c);
+}
+
+.button-container-2 button {
+    background: var(--button_container);
+    color: var(--button_container_c);
+}
+
+.button-container-3 {
+    border-color: var(--border_c);
+}
+
+.button-container-3 button {
+    background: var(--button_container);
+    color: var(--button_container_c);
+}
+
+.mas {
+    color: var(--mas_c);
+}
+
+
+
+
+
+:root,
+:root.light {
+    --preloader: #fff;
+    --preloader_c: Turquoise;
+    --bg-color: #fff;
+    --text-color: #123;
+    --header_before: rgb(255, 255, 255);
+    --background: rgba(77, 100, 141, 0.1);
+    --background_c: black;
+    --footer: #262626;
+    --footer_c: white;
+
+    --navMenu: black;
+    --navMenu_h: #4D648D;
+    --underline_after: black;
+    --underline_before: #4D648D;
+
+    --button_container: #000;
+    --button_container_c: #fff;
+    --border_c: #000;
+    --mas_c: #000;
+}
+
+:root.dark {
+    --preloader: #000;
+    --preloader_c: Turquoise;
+    --bg-color: #121212;
+    --text-color: #696d7d;
+    --header_before: rgb(0, 0, 0);
+    --background: rgb(0, 0, 0, 0.9);
+    --background_c: white;
+    --footer: #262626;
+    --footer_c: white;
+
+    --navMenu: white;
+    --navMenu_h: rgb(241, 229, 7);
+    --underline_after: white;
+    --underline_before: #FAFA33;
+
+    --button_container: #fff;
+    --button_container_c: #000;
+    --border_c: #fff;
+    --mas_c: #fff;
+}
+
+:root.red {
+    --preloader: rgb(255, 0, 0);
+    --preloader_c: rgba(237, 216, 55, 0.9);
+    --bg-color: #f51b1b;
+    --text-color: #080808;
+    --header_before: rgb(243, 69, 30);
+    --background: rgba(237, 216, 55, 0.9);
+    --background_c: rgb(20, 20, 20);
+    --footer: rgba(237, 216, 55, 0.9);
+    --footer_c: rgb(18, 18, 18);
+
+    --navMenu: rgb(50, 50, 50);
+    --navMenu_h: rgb(241, 229, 7);
+    --underline_after: rgb(0, 0, 0);
+    --underline_before: #FAFA33;
+
+    --button_container: rgb(228, 248, 9);
+    --button_container_c: rgb(0, 0, 0);
+    --border_c: rgb(0, 0, 0);
+    --mas_c: rgb(0, 0, 0);
+}
+
+:root.yellow {
+    --preloader: rgb(217, 255, 0);
+    --preloader_c: rgba(30, 119, 244, 0.9);
+    --bg-color: rgb(217, 255, 0);
+    --text-color: rgb(0, 0, 0);
+    --header_before: rgba(30, 119, 244, 1);
+    --background: rgb(233, 255, 111);
+    --background_c: rgb(20, 20, 20);
+    --footer: rgba(30, 119, 244, 1);
+    --footer_c: rgb(0, 0, 0);
+
+    --navMenu: rgb(0, 242, 255);
+    --navMenu_h: rgb(241, 229, 7);
+    --underline_after: rgb(19, 100, 213);
+    --underline_before: #FAFA33;
+
+    --button_container: rgb(228, 248, 9);
+    --button_container_c: rgb(0, 0, 0);
+    --border_c: rgb(0, 0, 0);
+    --mas_c: rgb(255, 255, 255);
+}
+
+:root.green {
+    --preloader: #004445;
+    --preloader_c: #2C7873;
+    --bg-color: linear-gradient(90deg, #2C7873, #6FB98F 70%);
+    --text-color: rgb(0, 0, 0);
+    --header_before: #004445;
+    --background: rgba(124, 210, 161, 0.5);
+    --background_c: #021C1E;
+    --footer: #004445;
+    --footer_c: rgb(255, 255, 255);
+
+    --navMenu: rgb(255, 255, 255);
+    --navMenu_h: rgb(19, 100, 213);
+    --underline_after: rgb(19, 100, 213);
+    --underline_before: #FAFA33;
+
+    --button_container: rgb(228, 248, 9);
+    --button_container_c: rgb(0, 0, 0);
+    --border_c: rgb(0, 0, 0);
+    --mas_c: rgb(255, 255, 255);
+}
+
+:root.violet {
+    --preloader: #B721FF;
+    --preloader_c: #FBDA61;
+    --bg-color: linear-gradient(19deg, #B721FF, #B721FF);
+    --text-color: rgb(255, 255, 255);
+    --header_before: #961bcf;
+    --background: rgba(84, 225, 225, 0.5);
+    --background_c: rgb(255, 255, 255);
+    --footer: #cc1bcf;
+    --footer_c: rgb(255, 255, 255);
+
+    --navMenu: rgb(255, 255, 255);
+    --navMenu_h: #FAFA33;
+    --underline_after: rgb(255, 255, 255);
+    --underline_before: #FAFA33;
+
+    --button_container: #cd20f8;
+    --button_container_c: rgb(36, 36, 36);
+    --border_c: rgb(0, 0, 0);
+    --mas_c: rgb(255, 255, 255);
+}
+
+:root.blue {
+    --preloader: #297ef6;
+    --preloader_c: #065df4;
+    --bg-color: rgb(68, 68, 249);
+    --text-color: rgb(244, 244, 244);
+    --header_before: rgb(85, 85, 255);
+    --background: rgba(109, 229, 229, 0.5);
+    --background_c: rgb(255, 255, 255);
+    --footer: rgb(85, 85, 255);
+    --footer_c: rgb(255, 255, 255);
+
+    --navMenu: rgb(255, 255, 255);
+    --navMenu_h: #FAFA33;
+    --underline_after: rgb(255, 255, 255);
+    --underline_before: #FAFA33;
+
+    --button_container: rgb(17, 17, 222);
+    --button_container_c: rgb(255, 255, 255);
+    --border_c: rgb(0, 0, 0);
+    --mas_c: rgb(255, 255, 255);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --text-color: #45ADFE;
+    }
+}

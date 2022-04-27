@@ -7,11 +7,14 @@
   box-sizing: border-box;
 }
 
+
+
 html,
 body {
   height: 100%;
   /* Местоположение фоновой картинки */
-  background-image: url(../images/White_background.png);
+  /* background-image: url(../images/White_background.png); */
+  background: #fff;
   /* Фоновое изображение выровнено по центру в горизонтальной и вертикальной плоскостях */
   background-position: center center;
   /* Фон не повторяется */
@@ -36,7 +39,8 @@ body {
     background-image: none;
 
     /* Здесь размер файла уменьшен на 93% чтобы  увеличить скорость загрузки страницы с мобильных устройств */
-    background-image: url(../images/White_background_mobile.png);
+    /* background-image: url(../images/White_background_mobile.png); */
+    background: #fff;
   }
 }
 
@@ -87,14 +91,14 @@ body {
 
 .header__line {
   position: fixed;
-  top: 70px;
+  top: 58px;
   left: 0;
-  z-index: 50;
+  z-index: 0;
   width: 100%;
-  height: 5px;
+  height: 10px;
   transition: all 0.5s ease 0s;
   position: absolute;
-  background: linear-gradient(90deg, rgba(246, 29, 29, 0.8), rgba(255, 255, 0, 0.8), rgba(188, 40, 211, 0.8), rgba(172, 255, 47, 0.8), rgba(172, 255, 47, 0.8), rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8), rgba(246, 29, 29, 0.8));
+  background: linear-gradient(90deg, rgba(246, 29, 29, 1), rgba(255, 255, 0, 1), rgba(188, 40, 211, 1), rgba(172, 255, 47, 1), rgba(172, 255, 47, 1), rgba(0, 0, 0, 1), rgba(255, 255, 255, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(255, 255, 255, 1), rgba(246, 29, 29, 1));
 
   /* animation: ticker 30s linear infinite; */
   animation: gradient 30s ease infinite;
@@ -151,19 +155,20 @@ body {
   position: relative;
   display: flex;
   justify-content: space-between;
-  height: 58px;
+  height: 40px;
   align-items: center;
   transition: all 0.5s ease 0s;
-  margin-top: 15px;
+  margin-top: 20px;
   /* height: 60px; */
 }
 
 .header__logo {
-  flex: 0 0 80px;
+  flex: 0 0 75px;
   margin: 0px auto auto 10px;
   float: left;
   /* width: 80px; */
   margin-left: 15px;
+  margin-bottom: 20px;
   position: relative;
   z-index: 3;
   /* background-color: red; */
@@ -191,11 +196,12 @@ body {
   display: flex;
   position: relative;
   z-index: 2;
+  margin-right: 10px;
 }
 
 .header__list li {
   list-style: none;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
 
 
@@ -214,12 +220,12 @@ body {
   }
 
   .header__line {
-    top: 50px;
+    top: 43px;
     transition: all 0.5s ease 0s;
   }
 
   .header__body {
-    height: 38px;
+    height: 25px;
     transition: all 0.5s ease 0s;
   }
 
@@ -334,51 +340,26 @@ body {
 
 
 
-
-.switch {
-  /* background: green; */
-  text-align: center;
-  height: 40px;
-  border: 2.5px solid #DFDEDE;
-  border-radius: 30px;
-  padding: 0 10px 0 10px;
-  display: inline-block;
-}
-
-.switch:hover {
-  border-color: #BFDEFF;
-  transition: all 0.8s ease 0s;
-}
-
-.switch-text {
-  display: inline-block;
-  text-align: justify;
-}
-
-.dropdown {
-  /* padding: 0px 20px; */
-  /* background: #000; */
-  /* float: right; */
-  margin-right: 20px;
-}
-
-.dropdown__text {
-  color: black;
-  font-weight: bold;
-  margin-left: 10px;
-}
-
-.dropdown__items li a {
-  text-decoration: none;
-  margin-left: 10px;
-}
-
 .lang-btn {
+  margin-left: 10px;
   color: black;
   position: relative;
 }
 
 .lang-btn:hover {
+  /* color: rgb(0, 119, 255); */
+  /* top: -1.3px; */
+  /* font-weight: bold; */
+  /* background: rgba(0, 0, 0, 0.75); */
+  color: black;
+}
+
+.lang-btn-mobile {
+  color: black;
+  position: relative;
+}
+
+.lang-btn-mobile:hover {
   color: rgb(0, 119, 255);
   top: -1.3px;
   font-weight: bold;
@@ -386,10 +367,9 @@ body {
 }
 
 
-.search {
-  float: left;
-  width: 250px;
-}
+
+
+
 
 
 /*Main content*/
@@ -447,6 +427,7 @@ body {
 /*Footer*/
 
 .footer {
+  z-index: 50;
   margin-top: 100px;
   position: relative;
   left: 0;
@@ -454,7 +435,7 @@ body {
   width: 100%;
   height: 200px;
   padding: 50px;
-  background-color: rgba(0, 0, 0, .85);
+  background: #262626;
   color: white;
   bottom: 0;
 }
@@ -527,8 +508,8 @@ body {
 }
 
 .popup:target .popup_content {
-  transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
-  /* transform: translate(0px, 0px); */
+  /* transform: perspective(600px) translate(0px, 0px) rotateX(0deg); */
+  transform: translate(0px, 0px);
   opacity: 1;
 }
 
@@ -552,14 +533,15 @@ body {
 .popup_content {
   border-radius: 15px;
   border: 3px solid #2940D3;
-  background-image: url(bg_reg.jpg);
+  /* background-image: url(bg_reg.jpg); */
+  background: black;
   color: #fff;
   max-width: 800px;
   padding: 30px;
   position: relative;
   transition: all 0.8s ease 0s;
   opacity: 0;
-  /* transform: translate(0px, -100%); */
+  transform: translate(0px, -100%);
   text-shadow: black 1px 1px 0, black -1px -1px 0,
     black -1px 1px 0, black 1px -1px 0;
 }
@@ -591,23 +573,23 @@ body {
 /*Button*/
 
 /* The switch - the box around the slider */
-.switch-btn {
+/* .switch-btn {
   position: relative;
   display: inline-block;
   width: 45px;
   height: 22px;
   margin-top: 10px;
-}
+} */
 
 /* Hide default HTML checkbox */
-.switch-btn input {
+/* .switch-btn input {
   opacity: 0;
   width: 0;
   height: 0;
-}
+} */
 
 /* The slider */
-.slider {
+/* .slider {
   position: absolute;
   cursor: pointer;
   top: 0;
@@ -646,10 +628,11 @@ input:checked+.slider:before {
 }
 
 /* Rounded sliders */
-.slider.round {
+/* .slider.round {
   border-radius: 34px;
 }
 
 .slider.round:before {
   border-radius: 50%;
 }
+ */

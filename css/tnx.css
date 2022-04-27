@@ -5,10 +5,10 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   font-family: "Nunito", sans-serif;
   color: rgba(0, 0, 0, 0.7);
-}
+} */
 
 .tnx_container {
   background-size: cover;
@@ -259,6 +259,7 @@ body {
   background: 0;
   padding: 0;
   cursor: pointer;
+  z-index: 100;
 }
 
 /*   xD   */

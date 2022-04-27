@@ -212,3 +212,28 @@ body {
 .box:hover>#in13gram {
     background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8), rgba(246, 29, 29, 0.8));
 }
+
+
+
+.back-to-main-btn {
+    position: relative;
+    top: -100px;
+    left: 50px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    /* background-color: azure; */
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    z-index: 10;
+    transition: all 0.3s ease 0s;
+}
+
+.back-to-main-btn img {
+    margin: 4px 4px 0px 4px;
+}
+
+.back-to-main-btn:hover {
+    top: -105px;
+}

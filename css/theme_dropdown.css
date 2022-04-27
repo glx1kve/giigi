@@ -1,0 +1,234 @@
+#img-theme {
+    position: absolute;
+    left: 6px;
+    top: 4px;
+    width: 26px;
+}
+
+#theme-dropdown {
+    position: absolute;
+    right: 48%;
+    width: 42px;
+    height: 42px;
+    border: 3px solid #F96167;
+    border-radius: 100px;
+    background: #FCE77D;
+    transition: .6s;
+}
+
+#theme-dropdown:hover {
+    height: 300px;
+}
+
+
+/* .theme-white {
+    position: absolute;
+    top: 0px;
+    background: transparent;
+    width: 75px;
+    color: transparent;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    border: 2.5px solid transparent;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: .6s;
+} */
+
+/* #theme-dropdown:hover>.theme {
+    top: 90px;
+    color: black;
+    background: dimgrey;
+    padding-bottom: 5px;
+} */
+
+
+
+/* #theme-dropdown:hover>#theme {
+    top: 90px;
+    color: black;
+    background: dimgrey;
+    padding-bottom: 5px;
+} */
+
+
+
+/* #theme-dropdown:hover>.theme {
+    top: 140px;
+    color: black;
+    background: dimgrey;
+    padding-bottom: 5px;
+}
+
+.theme {
+    position: absolute;
+    top: 0px;
+    background: transparent;
+    width: 75px;
+    color: transparent;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: Georgia, serif;
+    font-size: 15px;
+    border: 2.5px solid transparent;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: .6s;
+} */
+
+/* #theme-dropdown:hover>.theme {
+    top: 140px;
+    color: black;
+    background: dimgrey;
+    padding-bottom: 5px;
+} */
+
+.white-theme,
+.black-theme,
+.red-theme,
+.yellow-theme,
+.green-theme,
+.violet-theme,
+.blue-theme {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin: 10px auto;
+    transition: all 0.3s ease 0s;
+}
+
+.white-theme:hover,
+.black-theme:hover,
+.red-theme:hover,
+.yellow-theme:hover,
+.green-theme:hover,
+.violet-theme:hover,
+.blue-theme:hover {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.01s ease 0s;
+}
+
+.white-theme {
+    background: white;
+    opacity: 0;
+    margin-top: 50px;
+    /* width: 80%; */
+    /* max-width: 550px; */
+    /* margin: 2em auto; */
+    /* padding: 4em; */
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, .3),
+        -23px 0 20px -23px rgba(0, 0, 0, .8),
+        23px 0 20px -23px rgba(0, 0, 0, .8),
+        0 0 40px rgba(0, 0, 0, .1) inset;
+
+}
+
+.black-theme {
+    background: black;
+    opacity: 0;
+    box-shadow:
+        0 1px 4px rgba(255, 255, 255, 0.3),
+        -23px 0 20px -23px rgba(255, 255, 255, 0.8),
+        23px 0 20px -23px rgba(255, 255, 255, 0.8),
+        0 0 40px rgba(255, 255, 255, 0.1) inset;
+
+}
+
+
+.red-theme {
+    background: red;
+    opacity: 0;
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, .3),
+        -23px 0 20px -23px rgba(0, 0, 0, .8),
+        23px 0 20px -23px rgba(0, 0, 0, .8),
+        0 0 40px rgba(0, 0, 0, .1) inset;
+}
+
+.yellow-theme {
+    background: yellow;
+    opacity: 0;
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, .3),
+        -23px 0 20px -23px rgba(0, 0, 0, .8),
+        23px 0 20px -23px rgba(0, 0, 0, .8),
+        0 0 40px rgba(0, 0, 0, .1) inset;
+}
+
+.green-theme {
+    background: #6FB98F;
+    opacity: 0;
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, .3),
+        -23px 0 20px -23px rgba(0, 0, 0, .8),
+        23px 0 20px -23px rgba(0, 0, 0, .8),
+        0 0 40px rgba(0, 0, 0, .1) inset;
+}
+
+.violet-theme {
+    background: violet;
+    opacity: 0;
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, .3),
+        -23px 0 20px -23px rgba(0, 0, 0, .8),
+        23px 0 20px -23px rgba(0, 0, 0, .8),
+        0 0 40px rgba(0, 0, 0, .1) inset;
+}
+
+.blue-theme {
+    background: blue;
+    opacity: 0;
+    box-shadow:
+        0 1px 4px rgba(0, 0, 0, .3),
+        -23px 0 20px -23px rgba(0, 0, 0, .8),
+        23px 0 20px -23px rgba(0, 0, 0, .8),
+        0 0 40px rgba(0, 0, 0, .1) inset;
+}
+
+
+
+
+
+#theme-dropdown:hover .white-theme {
+    transition: all 0.5s ease 0.15s;
+    opacity: 1;
+
+}
+
+#theme-dropdown:hover .black-theme {
+    transition: all 0.5s ease 0.2s;
+    opacity: 1;
+
+}
+
+
+
+#theme-dropdown:hover .red-theme {
+    transition: all 0.5s ease 0.25s;
+    opacity: 1;
+}
+
+#theme-dropdown:hover .yellow-theme {
+    transition: all 0.5s ease 0.3s;
+    opacity: 1;
+}
+
+#theme-dropdown:hover .green-theme {
+    transition: all 0.5s ease 0.35s;
+    opacity: 1;
+}
+
+#theme-dropdown:hover .violet-theme {
+    transition: all 0.5s ease 0.4s;
+    opacity: 1;
+}
+
+#theme-dropdown:hover .blue-theme {
+    transition: all 0.5s ease 0.45s;
+    opacity: 1;
+}

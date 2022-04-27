@@ -1,0 +1,85 @@
+.lang-dropdown {
+    display: inline-block;
+    /* float: right; */
+    width: 25px;
+    height: 25px;
+
+}
+
+.lang-dropdown label {
+    display: block;
+    width: 25px;
+}
+
+.lang-dropdown ul li {
+    display: block;
+    width: 150px;
+    background: #fff;
+    padding: 15px 20px;
+    border-radius: 15px;
+
+}
+
+.lang-dropdown ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+.lang-dropdown ul li a:active {
+    color: #000;
+}
+
+
+.lang-dropdown ul li img {
+    margin-right: 10px;
+}
+
+
+.language {
+    width: 154px;
+    /* background-color: aqua; */
+    /* z-index: 3; */
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+.lang-dropdown ul li:hover {
+    background-color: #f1f1f1;
+    border-radius: 15px;
+}
+
+.lang-dropdown input {
+    display: none;
+}
+
+.lang-dropdown input~ul {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    top: -30px;
+    left: 140px;
+    z-index: 1;
+}
+
+.lang-dropdown input:checked~ul {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+}
+
+.animate {
+    /* -webkit-transition: all 1s; */
+    /* -moz-transition: all 0.3s; */
+    /* -ms-transition: all 0.3s; */
+    /* -ms-transition: all 0.3s; */
+    transition: all 0.6s;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    /* Chrome and Safari */
+    -moz-backface-visibility: hidden;
+    /* Firefox */
+    -ms-backface-visibility: hidden;
+    /* Internet Explorer */
+}
