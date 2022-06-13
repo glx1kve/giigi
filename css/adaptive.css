@@ -1,0 +1,200 @@
+.header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+    /* height: 70px; */
+}
+
+.header__body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+    transition: all 0.5s ease 0s;
+    margin-top: 20px;
+    /* height: 60px; */
+}
+
+.header__logo {
+    flex: 0 0 75px;
+    margin: 0px auto auto 10px;
+    float: left;
+    /* width: 80px; */
+    margin-left: 15px;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 3;
+    /* background-color: red; */
+    /* border-radius: 50%; */
+    /* overflow: hidden; */
+}
+
+.header__logo img {
+    /*якщо картинка буде більшою, то щоб підлаштувалася рід вказаний вище розмір*/
+    max-width: 100%;
+    /*якщо при border-radius: 50% незрозумілий відступ на лого*/
+    display: block;
+}
+
+
+
+.header__burger {
+    display: none;
+}
+
+/* .header__menu {} */
+
+
+.header__list {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    margin-right: 10px;
+}
+
+.header__list li {
+    list-style: none;
+    /* margin-left: 10px; */
+}
+
+
+@media (max-width: 1440px) {
+    .header__list {
+        left: -0.1%;
+    }
+}
+
+
+/* @media (max-width: 767px) { */
+@media (max-width: 1134px) {
+
+    body.lock {
+        overflow: hidden;
+    }
+
+    .header__line {
+        top: 43px;
+        transition: all 0.5s ease 0s;
+    }
+
+    .header__body {
+        height: 25px;
+        transition: all 0.5s ease 0s;
+    }
+
+    .header__logo {
+        flex: 0 0 55px;
+    }
+
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+        margin-right: 10px;
+    }
+
+    .header__burger span {
+        position: absolute;
+        background-color: black;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: -3px;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__burger:before,
+    .header__burger:after {
+        content: '';
+        background-color: black;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    .header__burger:before {
+        top: -12px;
+    }
+
+    .header__burger.act span {
+        transform: scale(0);
+    }
+
+    .header__burger:after {
+        bottom: 12px;
+    }
+
+    .header__burger.act:before {
+        transform: rotate(45deg);
+        top: -4px;
+    }
+
+    .header__burger.act:after {
+        transform: rotate(-45deg);
+        bottom: 22px;
+    }
+
+    .header__menu {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        padding: 80px 0px 0px 0px;
+        transition: all 0.3s ease 0s;
+
+        background: linear-gradient(-45deg, rgba(255, 255, 0, 0.95), rgba(24, 244, 160, 0.95), rgba(0, 255, 255, 0.95));
+
+        /* animation: ticker 30s linear infinite; */
+        animation: gradient 30s ease infinite;
+        animation-direction: alternate;
+        /* animation-play-state: paused; */
+
+        background-size: 1000% 1000%;
+        height: 100vh;
+        /* width: 100vw; */
+    }
+
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%
+        }
+
+        50% {
+            background-position: 100% 50%
+        }
+
+        100% {
+            background-position: 0% 50%
+        }
+    }
+
+
+    .header__menu.act {
+        top: 0;
+    }
+
+    .header__list {
+        display: block;
+    }
+
+    .header__list li {
+        margin: 0px 0px 5px 0px;
+    }
+}
+
+
+
+< !-- <nav class="header__menu">< !- Block head -><nav class="navMenu"><li><a href="#" id="lg_features" class="underline-one">Особливості</a></li><li><a href="#" id="lg_sub" class="underline-one">Підписки</a></li><li><a href="#" class="underline-one">FAQs</a></li><li><a href="#" id="lg_about" class="underline-one">Про нас</a></li></nav><ul class="header__list"><li><a href="creators.html"><div class="button-container-3"><span id="lg_creators1" class="mas">Творці</span><button id='work1' type="button" name="Hover" role="button"><span id="lg_creators2">Творці</span></button></div></a></li><li><div class="button-container-1"><span id="lg_plunge1" class="mas">Поринути в GIIGI</span><button id='work2' class="modal-button" type="button" name="Hover" role="button"><span id="lg_plunge2">Поринути в GIIGI</span></button></div></li>< !- <li><div class="switch__lang__mobile"><a href="#ua" class="lang-btn-mobile" onclick="Rload()">УКР</a><a href="#en" class="lang-btn-mobile" onclick="Rload()">ENG</a></div></li>-><li><div class="theme" style="margin-left:10px"><div class="theme__switcher"><div class="checkbox"><input type="checkbox" id="theme_switcher" checked><label for="theme_switcher"></label></div></div></div></li><li><div class="settings"><a id="settings-btn" href="#settings"></a></div></li></ul></nav>-->

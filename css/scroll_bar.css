@@ -28,8 +28,8 @@ body {
     background: linear-gradient(180deg, #00C0FF, #F7F680);
 }
 
-@media (max-width: 1134px) {
+@media (max-width: 888px) {
     ::-webkit-scrollbar {
-        width: 4px;
+        width: 6px;
     }
 }

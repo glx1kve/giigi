@@ -1,29 +1,36 @@
 html,
 body {
     background: var(--bg-color);
+    /* background-image: var(--bg-image); */
     color: var(--text-color);
+    transition: all 0.5s ease 0s;
 }
 
 .preloader {
     background-color: var(--preloader);
+    transition: all 0.5s ease 0s;
 }
 
 .loader {
     color: var(--preloader_c);
+    transition: all 0.5s ease 0s;
 }
 
-.header::before {
-    background-color: var(--header_before);
+.header {
+    background-color: var(--header_bg_color);
+    transition: all 0.5s ease 0s;
 }
 
 .background {
     background-color: var(--background);
     color: var(--background_c);
+    transition: all 0.5s ease 0s;
 }
 
 .footer {
     background: var(--footer);
     color: var(--footer_c);
+    transition: all 0.5s ease 0s;
 }
 
 
@@ -32,20 +39,24 @@ body {
 
 .navMenu a {
     color: var(--navMenu);
+    transition: all 0.5s ease 0s;
 }
 
 .navMenu a:hover {
     color: var(--navMenu_h);
+    transition: all 0.5s ease 0s;
 }
 
 .underline-one:after {
     /*after*/
     background-color: var(--underline_after);
+    transition: all 0.5s ease 0s;
 }
 
 .underline-one:hover:after {
     /*before*/
     background-color: var(--underline_before);
+    transition: all 0.5s ease 0s;
 }
 
 
@@ -56,28 +67,49 @@ body {
 .button-container-1 button {
     background: var(--button_container);
     color: var(--button_container_c);
+    transition: all 0.5s ease 0s;
 }
 
 .button-container-2 {
     border-color: var(--border_c);
+    transition: all 0.5s ease 0s;
 }
 
 .button-container-2 button {
     background: var(--button_container);
     color: var(--button_container_c);
+    transition: all 0.5s ease 0s;
 }
 
 .button-container-3 {
     border-color: var(--border_c);
+    transition: all 0.5s ease 0s;
 }
 
 .button-container-3 button {
     background: var(--button_container);
     color: var(--button_container_c);
+    transition: all 0.5s ease 0s;
 }
 
 .mas {
     color: var(--mas_c);
+    transition: all 0.5s ease 0s;
+}
+
+.settings {
+    background-color: var(--settings);
+    transition: all 0.5s ease 0s;
+}
+
+
+/* menu burger btn */
+#nav-icon span {
+    background: var(--menu-burger-btn);
+}
+
+.menuBurger-list {
+    background: var(--menuBurger-list);
 }
 
 
@@ -88,11 +120,13 @@ body {
 :root.light {
     --preloader: #fff;
     --preloader_c: Turquoise;
+
+    /* --bg-image: url(../images/GIIGI-background-white.png); */
     --bg-color: #fff;
     --text-color: #123;
-    --header_before: rgb(255, 255, 255);
-    --background: rgba(77, 100, 141, 0.1);
-    --background_c: black;
+    --header_bg_color: rgb(255, 255, 255);
+    --background: rgba(255, 255, 255, 0.85);
+    --background_c: rgb(0, 0, 0);
     --footer: #262626;
     --footer_c: white;
 
@@ -105,28 +139,39 @@ body {
     --button_container_c: #fff;
     --border_c: #000;
     --mas_c: #000;
+
+
+    --settings: #770eb4;
+    --menu-burger-btn: #000000;
+    --menuBurger-list: rgb(119, 14, 180);
 }
 
 :root.dark {
-    --preloader: #000;
-    --preloader_c: Turquoise;
-    --bg-color: #121212;
-    --text-color: #696d7d;
-    --header_before: rgb(0, 0, 0);
-    --background: rgb(0, 0, 0, 0.9);
-    --background_c: white;
-    --footer: #262626;
-    --footer_c: white;
+    --preloader: #B721FF;
+    --preloader_c: #FBDA61;
 
-    --navMenu: white;
-    --navMenu_h: rgb(241, 229, 7);
-    --underline_after: white;
+    /* --bg-image: url(../images/GIIGI-background-purple.png); */
+    --bg-color: linear-gradient(19deg, #B721FF, #B721FF);
+    --text-color: rgb(255, 255, 255);
+    --header_bg_color: #961bcf;
+    --background: rgba(181, 58, 205, 0.85);
+    --background_c: rgb(255, 255, 255);
+    --footer: #cc1bcf;
+    --footer_c: rgb(255, 255, 255);
+
+    --navMenu: rgb(255, 255, 255);
+    --navMenu_h: #FAFA33;
+    --underline_after: rgb(255, 255, 255);
     --underline_before: #FAFA33;
 
-    --button_container: #fff;
-    --button_container_c: #000;
-    --border_c: #fff;
-    --mas_c: #fff;
+    --button_container: #cd20f8;
+    --button_container_c: rgb(36, 36, 36);
+    --border_c: rgb(0, 0, 0);
+    --mas_c: rgb(255, 255, 255);
+
+    --settings: aliceblue;
+    --menu-burger-btn: #ffffff;
+    --menuBurger-list: rgb(119, 14, 180);
 }
 
 :root.red {
@@ -239,9 +284,33 @@ body {
     --mas_c: rgb(255, 255, 255);
 }
 
+
+
+
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg-color: #121212;
-        --text-color: #45ADFE;
+        --preloader: #B721FF;
+        --preloader_c: #FBDA61;
+
+        /* --bg-image: url(../images/GIIGI-background-purple.png); */
+        --bg-color: linear-gradient(19deg, #B721FF, #B721FF);
+        --text-color: rgb(255, 255, 255);
+        --header_before: #961bcf;
+        --background: rgba(181, 58, 205, 0.85);
+        --background_c: rgb(255, 255, 255);
+        --footer: #cc1bcf;
+        --footer_c: rgb(255, 255, 255);
+
+        --navMenu: rgb(255, 255, 255);
+        --navMenu_h: #FAFA33;
+        --underline_after: rgb(255, 255, 255);
+        --underline_before: #FAFA33;
+
+        --button_container: #cd20f8;
+        --button_container_c: rgb(36, 36, 36);
+        --border_c: rgb(0, 0, 0);
+        --mas_c: rgb(255, 255, 255);
+
+        --settings: aliceblue;
     }
 }

@@ -1,0 +1,116 @@
+.popup_settings {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0, 0.4);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+
+.popup_settings:target {
+    /*.popup:target --> .popup.open*/
+    opacity: 1;
+    visibility: visible;
+}
+
+
+.popup_settings:target .popup_settings_content {
+    /* transform: perspective(600px) translate(0px, 0px) rotateX(0deg); */
+    transform: translate(0px, 0px);
+    opacity: 1;
+}
+
+.popup_settings_area {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+}
+
+.popup_settings_body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px, 10px;
+    /*зверху/знизу по 30, справа/зліва по 10 відступи*/
+}
+
+.popup_settings_content {
+    border-radius: 15px;
+    /* border: 3px solid #2940D3; */
+    /* background-image: url(bg_reg.jpg); */
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    max-width: 800px;
+    padding: 30px;
+    position: relative;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    transform: translate(0px, -100%);
+
+    width: 500px;
+    height: 500px;
+
+
+    box-shadow: 0px 0px 10px 1px;
+}
+
+.popup_settings_close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.popup_settings_title {
+    text-align: center;
+    font-size: 40px;
+    margin: 0px, 0px, 1em, 0px;
+    text-shadow: black 1px 1px 0, black -1px -1px 0,
+        black -1px 1px 0, black 1px -1px 0;
+}
+
+.popup_settings_text {
+    font-size: 18px;
+    padding: 10px;
+}
+
+
+
+
+/* Settings */
+.settings {
+    background-color: aliceblue;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 0 20px 0 10px;
+}
+
+.settings img {
+    margin: 5px;
+    transition: transform 1.7s ease-in-out;
+}
+
+.settings img:hover {
+    transform: rotate(360deg);
+}
+
+
+
+
+/* Inside settings*/
+
+.language img {
+    cursor: pointer;
+}

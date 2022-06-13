@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/adaptive.css"> -->
     <link rel="stylesheet" href="css/scroll_bar.css">
     <link rel="stylesheet" href="css/tnx.css">
     <link rel="stylesheet" href="css/index_reg_btn.css">
     <link rel="stylesheet" href="css/btn_log_reg.css">
     <link rel="stylesheet" href="css/log_reg_form.css">
+    <link rel="stylesheet" href="css/log_reg_mobile.css">
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/theme1.css">
     <link rel="stylesheet" href="css/nav_menu.css">
@@ -22,7 +24,12 @@
     <link rel="stylesheet" href="css/preloader.css">
     <link rel="stylesheet" href="css/language_dropdown.css">
     <link rel="stylesheet" href="css/theme_dropdown.css">
+    <link rel="stylesheet" href="css/popup_settings.css">
+    <link rel="stylesheet" href="css/menu_burger.css">
+
+
     <link rel="stylesheet" href="css/switch_theme.css">
+    <link rel="stylesheet" href="css/theme_switch_btn.css">
     <!-- <link rel="stylesheet" href="css/lang_switch.css"> -->
     <!-- <link rel="stylesheet" href="css/lang_dropdown.css"> -->
     <!-- <link rel="stylesheet" href="css/preloader.css"> -->
@@ -35,161 +42,142 @@
     <div class="wrapper">
         <!-- <div class="switch-btn"></div>
     <div class="switch-btn switch-on"></div> -->
-        <header class="header">
-            <div class="header__container">
-                <div class="header__body">
 
-                    <a href="#" class="header__logo">
-                        <img src="images/GIIGI_logo_ukraine.png" alt="Logo">
-                    </a>
-                    <div class="header__burger" onclick="clickMenu()">
+        <header class="header">
+
+
+            <!-- <div class="header__burger" onclick="clickMenu()">
                         <span></span>
 
-                    </div>
-                    <!-- <nav class="navMenu">
+                    </div> -->
+            <!-- <nav class="navMenu">
                         <div class="dot"></div>
                     </nav> -->
-                    <nav class="header__menu">
+            <div class="header_block">
+                <div class="row">
+                    <div class="left_header">
+                        <a href="#" class="header__logo">
+                            <img src="images/GIIGI_logo_ukraine.png" alt="Logo">
+                        </a>
+                        <nav class="navMenu">
 
-                        <!-- Block head -->
-                        <ul class="header__list">
-                            <nav class="navMenu">
-                                <li>
+                            <li>
 
-                                    <a href="#" id="lg_features" class="underline-one">Особливості</a>
-                                </li>
-                                <li>
-                                    <a href="#" id="lg_sub" class="underline-one">Підписки</a>
+                                <a href="#" id="lg_features" class="underline-one">Особливості</a>
+                            </li>
+                            <li>
+                                <a href="#" id="lg_sub" class="underline-one">Підписки</a>
 
-                                </li>
-                                <li>
-                                    <a href="#" class="underline-one">FAQs</a>
+                            </li>
+                            <li>
+                                <a href="#" class="underline-one">FAQs</a>
 
-                                </li>
-                                <li>
-                                    <a href="#" id="lg_about" class="underline-one">Про нас</a>
+                            </li>
+                            <li>
+                                <a href="#" id="lg_about" class="underline-one">Про нас</a>
 
-                                </li>
-                            </nav>
-                            <!-- <li>
-                                <div class="switch navig-buttons">
-                                    <div id="lg_theme" class="switch-text">Switch theme</div>
-                                    <label class="switch-btn">
-                                        <input type="checkbox">
-                                        <span class="slider round"></span>
-                                    </label>
+                            </li>
+
+                        </nav>
+                    </div>
+                    <div class="right_header">
+
+                        <div class="right_header_container">
+
+
+                            <a href="creators.html">
+                                <div class="button-container-3">
+                                    <span id="lg_creators1" class="mas">Творці</span>
+                                    <button id='work1' type="button" name="Hover" role="button"><span
+                                            id="lg_creators2">Творці</span></button>
                                 </div>
-                            </li> -->
+                            </a>
 
-
-                            <div id="theme-dropdown">
-                                <img id="img-theme" src="images/themes.png">
-
-                                <a onclick="themeSwitch('light')">
-                                    <div class="white-theme" value="light"></div>
-                                </a>
-
-
-                                <a onclick="themeSwitch('dark')">
-                                    <div class="black-theme"></div>
-                                </a>
-
-                                <a onclick="themeSwitch('red')">
-                                    <div class="red-theme"></div>
-                                </a>
-
-                                <a onclick="themeSwitch('yellow')">
-                                    <div class="yellow-theme"></div>
-                                </a>
-
-                                <a onclick="themeSwitch('green')">
-                                    <div class="green-theme"></div>
-                                </a>
-
-                                <a onclick="themeSwitch('violet')">
-                                    <div class="violet-theme"></div>
-                                </a>
-
-                                <a onclick="themeSwitch('blue')">
-                                    <div class="blue-theme"></div>
-                                </a>
-
-
+                            <div class="button-container-1">
+                                <span id="lg_plunge1" class="mas">Поринути в GIIGI</span>
+                                <button id='work2' class="modal-button" type="button" name="Hover" role="button"><span
+                                        id="lg_plunge2">Поринути в GIIGI</span></button>
                             </div>
+                        </div>
 
 
-
-
-                            <li>
-                                <div class="language-dropdown">
-
-                                    <label for="touch"><span id="lg_lang"><img id="img-language"
-                                                src="images/translation.png" alt="Language"></span></label>
-                                    <input type="checkbox" id="touch">
-
-                                    <ul class="slide">
-                                        <li><img src="images/ukraine.png" alt="Ukraine" width="20"><a href="#ua"
-                                                class="lang-btn" onclick="Rload()">Українська</a></li>
-                                        <li><img src="images/united-kingdom.png" alt="Great Britain" width="20"><a
-                                                href="#en" class="lang-btn" onclick="Rload()">English</a>
-                                        </li>
-                                    </ul>
-
+                        <div class="theme" style="margin-left:10px">
+                            <div class="theme__switcher">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="theme_switcher" checked>
+                                    <label for="theme_switcher"></label>
                                 </div>
-                            </li>
-                            <li>
-                                <a href="creators.html">
-                                    <div class="button-container-3">
-                                        <span id="lg_creators1" class="mas">Творці</span>
-                                        <button id='work1' type="button" name="Hover" role="button"><span
-                                                id="lg_creators2">Творці</span></button>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <div class="button-container-1">
-                                    <span id="lg_plunge1" class="mas">Поринути в GIIGI</span>
-                                    <button id='work2' class="modal-button" type="button" name="Hover"
-                                        role="button"><span id="lg_plunge2">Поринути в GIIGI</span></button>
-                                </div>
-                            </li>
+                            </div>
+                        </div>
 
-                            <!-- <li>
-                                <div class="switch__lang__mobile">
-                                    <a href="#ua" class="lang-btn-mobile" onclick="Rload()">УКР</a>
-                                    <a href="#en" class="lang-btn-mobile" onclick="Rload()">ENG</a>
-                                </div>
-                            </li> -->
-                        </ul>
-                    </nav>
 
+                        <div class="settings"><a id="settings-btn" href="#settings"></a></div>
+
+
+
+
+
+                    </div>
+                    <div class="menuBurger-btn">
+                        <a onclick="menu()" id="menuBurger-btn">
+                            <div id="nav-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
+
+
+
+
+
+
             </div>
+
+
+
+
             <div class="header__line"></div>
+
         </header>
+        <div class="menuBurger-list"></div>
 
 
         <div class="background">
             <div class="background__container">
                 <div class="row">
                     <div class="short">
-                        <img src="images/Logo-info.png" alt="Logo" width="550">
-                        <h6 id="lg_logo">Логотип компанії GIIGI</h6><br>
+
                         <p id="lg_left_text">
-                            &nbsp;&nbsp;&nbsp;&nbsp;Логотип складається з абревіатури GIIGI, яка має повну назву
+                            Логотип складається з абревіатури GIIGI, яка має повну назву
                             «Generic
                             Insurrection in Game Industry». Звучить доволі пафосно, але ж не потрібно приховувати правду
                             від
                             поціновувачів. Абревіатура обрамлена, що символізує кордони, в межах яких функціонує
                             компанія.
-                            Також
-                            на логотипі є фонове зображення, яке використовується виключно в маркетингових цілях та
-                            символізує
-                            безкордрнний та фантастичний космос, прямо таки як ми xD. Ще в лівому нижньому куті є
-                            символ,
-                            який
-                            посилається на колись відомий в минулому клан BOTW.
                         </p>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid maiores iusto libero quos
+                            molestiae aut cupiditate recusandae dicta numquam ullam adipisci iure minus consectetur
+                            tenetur sit, culpa quia, temporibus consequatur!
+                            Eaque ducimus perspiciatis laborum veniam error odit magnam excepturi amet autem assumenda
+                            perferendis illum praesentium at nihil, deleniti, necessitatibus, distinctio consequatur.
+                            Itaque, placeat harum minus sapiente expedita assumenda aperiam repellendus!
+                            Quisquam ipsum vel corrupti deleniti, fuga perspiciatis odio neque autem cum voluptatem
+                            dolor consequatur consectetur ab officiis est quod aperiam in voluptas voluptates expedita
+                            natus consequuntur sed quos. Modi, voluptatum!
+                            Exercitationem dolor quis perspiciatis sapiente ratione ea esse quasi eveniet necessitatibus
+                            obcaecati maiores cum molestias totam repudiandae, magni tempore possimus nam tempora vitae
+                            perferendis eius corporis, alias odio! Quia, quidem.
+                            Esse deleniti, velit corporis expedita asperiores quas officia perferendis eligendi placeat,
+                            architecto et aliquid itaque repellendus! Dolore dicta adipisci provident et ratione illo.
+                            Non delectus vel aliquid sequi illum natus?
+                        </p>
+
                     </div>
                     <div class="content">
                         <p id="lg_right_text">
@@ -214,7 +202,23 @@
                             doloremque doloribus harum? Officiis consequuntur delectus debitis saepe reprehenderit, eius
                             sed
                             magnam ad natus blanditiis inventore alias voluptates esse ipsum officia ducimus quisquam
-                            voluptatibus cumque id porro ullam perferendis fuga minus laudantium?</p>
+                            voluptatibus cumque id porro ullam perferendis fuga minus laudantium?
+
+                            Pariatur illo quam ratione numquam fugiat rerum ipsum, eos est voluptas eligendi, magni
+                            exercitationem nostrum consequatur, maxime aspernatur. Magnam accusamus at dicta minus, ipsa
+                            tempora repudiandae autem eveniet odio quasi.
+                            Suscipit iste autem atque optio nemo deleniti amet at doloremque ducimus sint nulla
+                            quisquam, mollitia, vero perferendis! Veniam iusto eum, obcaecati ducimus libero, beatae
+                            vero maxime in sed voluptates totam.
+                            Praesentium nulla facere officiis, unde dolorum eveniet eum. Dolore nulla placeat rem
+                            molestiae. Pariatur fugit nulla dolore qui, consequatur, nostrum aperiam nam ad laboriosam
+                            est, aliquam recusandae veniam sit voluptatibus!
+                            Odio inventore aliquid architecto ipsam vel, rerum sunt obcaecati animi. Animi alias
+                            necessitatibus itaque, eos amet explicabo illum saepe repudiandae dolores pariatur, natus
+                            impedit inventore rerum qui! Eveniet, laboriosam porro.
+                            Voluptas qui natus harum officia minus illum, possimus accusantium ullam magni ratione
+                            soluta cumque quibusdam, provident hic ut odio minima nobis, quae quisquam sed nihil
+                            repudiandae officiis atque! Vel, ratione.</p>
                     </div>
                 </div>
             </div>
@@ -254,10 +258,10 @@
                         </div> -->
                         <!-- <span id="lg_reg">або використайте свій email для реєстрації</span> -->
                         <br>
-                        <input type="text" placeholder="Name" />
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
-                        <input type="password" placeholder="Reenter password" />
+                        <input type="text" placeholder="Name" required="">
+                        <input type="email" placeholder="Email" required="">
+                        <input type="password" placeholder="Password" required="">
+                        <input type="password" placeholder="Reenter password" required="">
                         <br>
                         <button id="lg_sign_up1">Зареєструватися</button>
                     </form>
@@ -272,8 +276,8 @@
                         </div> -->
                         <!-- <span id="lg_log">або скористайтеся своїм облікомим записом</span> -->
                         <br>
-                        <input type="email" placeholder="Email" />
-                        <input type="password" placeholder="Password" />
+                        <input type="email" placeholder="Email" required="">
+                        <input type="password" placeholder="Password" required="">
                         <a href="#" id="lg_forgot">Забули свій пароль?</a>
                         <br>
                         <button id="lg_sign_in1">Увійти</button>
@@ -298,10 +302,10 @@
 
             <button class="icon-button close-button">
                 <img src="images/close_button.ico" width="28">
-                <path
+                <!-- <path
                     d="M 25 3 C 12.86158 3 3 12.86158 3 25 C 3 37.13842 12.86158 47 25 47 C 37.13842 47 47 37.13842 47 25 C 47 12.86158 37.13842 3 25 3 z M 25 5 C 36.05754 5 45 13.94246 45 25 C 45 36.05754 36.05754 45 25 45 C 13.94246 45 5 36.05754 5 25 C 5 13.94246 13.94246 5 25 5 z M 16.990234 15.990234 A 1.0001 1.0001 0 0 0 16.292969 17.707031 L 23.585938 25 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 25 26.414062 L 32.292969 33.707031 A 1.0001 1.0001 0 1 0 33.707031 32.292969 L 26.414062 25 L 33.707031 17.707031 A 1.0001 1.0001 0 0 0 32.980469 15.990234 A 1.0001 1.0001 0 0 0 32.292969 16.292969 L 25 23.585938 L 17.707031 16.292969 A 1.0001 1.0001 0 0 0 16.990234 15.990234 z">
                 </path>
-                </svg>
+                </svg> -->
             </button>
         </div>
     </div>
@@ -309,6 +313,86 @@
 
 
 
+
+
+    <div class="log_reg_mobile">
+        <div class="log_reg_mobile_form">
+            <input type="checkbox" id="chk" aria-hidden="true">
+
+            <div class="signup_mobile">
+                <form>
+                    <label for="chk" aria-hidden="true">Sign up</label>
+                    <div class="input_mobile_form">
+                        <input type="text" name="txt" placeholder="User name" required="">
+                        <input type="email" name="email" placeholder="Email" required="">
+                        <input type="password" name="pswd" placeholder="Password" required="">
+                        <button>Sign up</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="login_mobile">
+                <form>
+                    <label for="chk" aria-hidden="true">Login</label>
+                    <div class="input_mobile_form">
+                        <input type="email" name="email" placeholder="Email" required="">
+                        <input type="password" name="pswd" placeholder="Password" required="">
+                        <button>Login</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <button class="icon-button mobile-close">
+            <a onclick="lrMobile(0)"><img src="images/close_button.ico" width="28"></a>
+            <!-- <path
+                    d="M 25 3 C 12.86158 3 3 12.86158 3 25 C 3 37.13842 12.86158 47 25 47 C 37.13842 47 47 37.13842 47 25 C 47 12.86158 37.13842 3 25 3 z M 25 5 C 36.05754 5 45 13.94246 45 25 C 45 36.05754 36.05754 45 25 45 C 13.94246 45 5 36.05754 5 25 C 5 13.94246 13.94246 5 25 5 z M 16.990234 15.990234 A 1.0001 1.0001 0 0 0 16.292969 17.707031 L 23.585938 25 L 16.292969 32.292969 A 1.0001 1.0001 0 1 0 17.707031 33.707031 L 25 26.414062 L 32.292969 33.707031 A 1.0001 1.0001 0 1 0 33.707031 32.292969 L 26.414062 25 L 33.707031 17.707031 A 1.0001 1.0001 0 0 0 32.980469 15.990234 A 1.0001 1.0001 0 0 0 32.292969 16.292969 L 25 23.585938 L 17.707031 16.292969 A 1.0001 1.0001 0 0 0 16.990234 15.990234 z">
+                </path>
+                </svg> -->
+        </button>
+    </div>
+
+
+
+
+
+
+    <!-- Settings -->
+    <div id="settings" class="popup_settings">
+        <!-- <a href="#" class="popup_settings_area"></a> -->
+        <div class="popup_settings_body">
+            <div class="popup_settings_content">
+                <a href="#" class="popup_settings_close"><img src="images/close_button.ico" width="25"></a>
+                <div class="popup_settings_title" id="lg_settings">Налаштування
+                </div>
+                <hr>
+
+                <div class="popup_settings_text">
+                    <!-- <div class="register"> -->
+                    <div class="language">
+                        <p id="lg_lang" style="margin-right: 20px;">Мова</p>
+                        <div class="lang-UA"><a id="ua" onclick="Rload('ua')"><img src="images/ukraine.png"
+                                    alt="Ukraine" width="25"></a></div>
+                        <div class="lang-EN"><a id="en" onclick="Rload('en')"><img src="images/united-kingdom.png"
+                                    alt="Great Britain" width="25"></a></div>
+                    </div>
+                    <!-- <form method="POST" action="add_info.php">
+                            Введіть логін &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="login_reg"
+                                name="login_reg" placeholder="Введіть логін"><br>
+                            Введіть пароль &nbsp;&nbsp;&nbsp;&nbsp;<input type="password" id="psswrd1" name="psswrd1"
+                                placeholder="Введіть пароль"><br>
+                            Повторіть пароль <input type="password" id="psswrd2" name="psswrd2"
+                                placeholder="Підтвертіть пароль"><br>
+                            <div class="button">
+                                <center><input type="submit" class="add-btn" id="submit_reg" name="submit_reg"
+                                        value="Зареєструватися"></center>
+                            </div>
+                        </form> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
@@ -357,17 +441,6 @@
     <!-- Change bg theme -->
 
 
-
-    <!-- <script src="scripts/tnx.js"></script> -->
-    <script src="scripts/log_reg_form.js"></script>
-    <script src="scripts/lang.js"></script>
-    <script src="scripts/menu_burger.js"></script>
-    <script src="scripts/preloader.js"></script>
-    <script src="scripts/theme_switcher_script.js"></script>
-    <script src="scripts/hotkeys.js"></script>
-    <!-- <script src="scripts/switch_theme.js"></script> -->
-    <!-- <script src="scripts/switch_theme.js"></script> -->
-
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
         integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
@@ -375,13 +448,22 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    <!-- <script>
-        const setTheme = theme => document.documentElement.className = theme;
 
-        document.getElementById('theme-select').addEventListener('change', function () {
-            setTheme(this.value);
-        });
-    </script> -->
+
+
+
+    <!-- <script src="scripts/tnx.js"></script> -->
+    <script src="scripts/lang.js"></script>
+    <script src="scripts/load_theme_script.js"></script>
+    <script src="scripts/log_reg_form.js"></script>
+    <script src="scripts/log_reg_mobile.js"></script>
+    <script src="scripts/menu_burger.js"></script>
+    <script src="scripts/preloader.js"></script>
+    <script src="scripts/hotkeys.js"></script>
+    <script src="scripts/switch_theme.js"></script>
+    <script src="scripts/not_scroll_popup.js"></script>
+    <!-- <script src="scripts/switch_theme.js"></script> -->
+
 </body>
 
 </html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="shadow"></div>
+
+    <style>
+        body {
+            background-image: url(images/White_background++.png);
+            background-position: center center;
+            /* Фон не повторяется */
+            background-repeat: no-repeat;
+            /* Фон зафиксирован в области просмотра и потому не двигается, когда высота контента превышает высоту изображения */
+            background-attachment: fixed;
+            /* Это свойство заставляет фон менять масштаб при изменении размеров содержащего его контейнера*/
+            background-size: cover;
+
+        }
+
+        .shadow {
+            background-color: rgba(0, 0, 0, .5);
+            height: 100%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            color: aliceblue;
+        }
+    </style>
+</body>
+
+</html>

@@ -7,14 +7,12 @@
   box-sizing: border-box;
 }
 
-
-
 html,
 body {
   height: 100%;
   /* Местоположение фоновой картинки */
-  /* background-image: url(../images/White_background.png); */
-  background: #fff;
+  background-image: url(../images/GIIGI-background-white.png);
+  /* background: #fff; */
   /* Фоновое изображение выровнено по центру в горизонтальной и вертикальной плоскостях */
   background-position: center center;
   /* Фон не повторяется */
@@ -23,8 +21,8 @@ body {
   background-attachment: fixed;
   /* Это свойство заставляет фон менять масштаб при изменении размеров содержащего его контейнера*/
   background-size: cover;
-  /* Цвет фона, который будет отображаться при загрузке фоновой картинки
-    background-color: #464646;*/
+  /* Цвет фона, который будет отображаться при загрузке фоновой картинки*/
+  /* background-color: #464646; */
 
   /*background: url(images/White_background.png) center center cover no-repeat fixed;*/
 
@@ -32,7 +30,13 @@ body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-@media only screen and (max-width: 767px) {
+
+body {
+  overflow: auto;
+}
+
+
+@media only screen and (max-width: 800px) {
 
   html,
   body {
@@ -77,6 +81,37 @@ body {
 
 
 
+/* Language */
+
+.language {
+  /* background-color: black; */
+  width: 60px;
+  height: 30px;
+  margin: 5px 10px 0 0;
+
+  display: flex;
+}
+
+.language img {
+  margin: 0 5px;
+}
+
+.lang-UA,
+.lang-EN {
+  position: relative;
+
+}
+
+
+.lang-UA:hover,
+.lang-EN:hover {
+  top: -1px;
+}
+
+
+
+
+
 /*Header*/
 
 .header {
@@ -85,20 +120,72 @@ body {
   left: 0;
   z-index: 50;
   width: 100%;
-  /* height: 80px; */
-  /* background-color: rgb(255, 255, 255); */
+  height: 60px;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.5s ease 0s;
 }
+
+
+.left_header {
+  float: left;
+  width: 51%;
+  height: 60px;
+  /* background-color: blue; */
+
+  padding-top: 7px;
+  display: flex;
+  list-style: none;
+
+  /* z-index: 50; */
+
+
+}
+
+.right_header {
+  float: right;
+  width: 49%;
+  height: 60px;
+  /* background-color: aqua; */
+
+  padding-top: 7px;
+  display: flex;
+  list-style: none;
+
+  /* z-index: 50; */
+
+
+}
+
+.right_header_container {
+  /* background-color: red; */
+  margin: 0 5px 0 auto;
+  /* z-index: 50; */
+
+}
+
+
+.left_header img {
+  width: 80px;
+  margin: 0 20px 0 20px;
+  /* z-index: 50; */
+}
+
+
+
+
+
 
 .header__line {
   position: fixed;
   top: 58px;
   left: 0;
-  z-index: 0;
+  z-index: 50;
   width: 100%;
-  height: 10px;
   transition: all 0.5s ease 0s;
   position: absolute;
   background: linear-gradient(90deg, rgba(246, 29, 29, 1), rgba(255, 255, 0, 1), rgba(188, 40, 211, 1), rgba(172, 255, 47, 1), rgba(172, 255, 47, 1), rgba(0, 0, 0, 1), rgba(255, 255, 255, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(255, 255, 255, 1), rgba(246, 29, 29, 1));
+
+  /* z-index: 51; */
 
   /* animation: ticker 30s linear infinite; */
   animation: gradient 30s ease infinite;
@@ -139,202 +226,55 @@ body {
   }
 } */
 
-.header:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgb(255, 255, 255);
-  z-index: 2;
-  /* height: 70px; */
-}
 
-.header__body {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  height: 40px;
-  align-items: center;
-  transition: all 0.5s ease 0s;
-  margin-top: 20px;
-  /* height: 60px; */
-}
+/* Header adaptive */
 
-.header__logo {
-  flex: 0 0 75px;
-  margin: 0px auto auto 10px;
-  float: left;
-  /* width: 80px; */
-  margin-left: 15px;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 3;
-  /* background-color: red; */
-  /* border-radius: 50%; */
-  /* overflow: hidden; */
-}
+@media (max-width: 888px) {
 
-.header__logo img {
-  /*якщо картинка буде більшою, то щоб підлаштувалася рід вказаний вище розмір*/
-  max-width: 100%;
-  /*якщо при border-radius: 50% незрозумілий відступ на лого*/
-  display: block;
-}
-
-
-
-.header__burger {
-  display: none;
-}
-
-/* .header__menu {} */
-
-
-.header__list {
-  display: flex;
-  position: relative;
-  z-index: 2;
-  margin-right: 10px;
-}
-
-.header__list li {
-  list-style: none;
-  /* margin-left: 10px; */
-}
-
-
-@media (max-width: 1440px) {
-  .header__list {
-    left: -0.1%;
+  .left_header img {
+    margin-right: 0px;
   }
+
 }
 
 
-/* @media (max-width: 767px) { */
-@media (max-width: 1134px) {
+@media (max-width: 800px) {
+
 
   body.lock {
     overflow: hidden;
   }
 
+
+
+
+  .left_header img {
+    width: 60px;
+  }
+
+  .header {
+    height: 45px;
+    transition: all 0.5s ease 0s;
+  }
+
   .header__line {
     top: 43px;
+    height: 0.5vh;
     transition: all 0.5s ease 0s;
   }
 
-  .header__body {
-    height: 25px;
-    transition: all 0.5s ease 0s;
-  }
 
-  .header__logo {
-    flex: 0 0 55px;
-  }
 
-  .header__burger {
-    display: block;
-    position: relative;
-    width: 30px;
-    height: 20px;
-    z-index: 3;
-    margin-right: 10px;
-  }
 
-  .header__burger span {
-    position: absolute;
-    background-color: black;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    top: -3px;
-    transition: all 0.3s ease 0s;
-  }
-
-  .header__burger:before,
-  .header__burger:after {
-    content: '';
-    background-color: black;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    left: 0;
-    transition: all 0.3s ease 0s;
-  }
-
-  .header__burger:before {
-    top: -12px;
-  }
-
-  .header__burger.act span {
-    transform: scale(0);
-  }
-
-  .header__burger:after {
-    bottom: 12px;
-  }
-
-  .header__burger.act:before {
-    transform: rotate(45deg);
-    top: -4px;
-  }
-
-  .header__burger.act:after {
-    transform: rotate(-45deg);
-    bottom: 22px;
-  }
-
-  .header__menu {
-    position: fixed;
-    top: -100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    padding: 80px 0px 0px 0px;
-    transition: all 0.3s ease 0s;
-
-    background: linear-gradient(-45deg, rgba(255, 255, 0, 0.95), rgba(24, 244, 160, 0.95), rgba(0, 255, 255, 0.95));
-
-    /* animation: ticker 30s linear infinite; */
-    animation: gradient 30s ease infinite;
-    animation-direction: alternate;
-    /* animation-play-state: paused; */
-
-    background-size: 1000% 1000%;
-    height: 100vh;
-    /* width: 100vw; */
+  .right_header {
+    opacity: 0;
+    visibility: hidden;
   }
 
 
-  @keyframes gradient {
-    0% {
-      background-position: 0% 50%
-    }
-
-    50% {
-      background-position: 100% 50%
-    }
-
-    100% {
-      background-position: 0% 50%
-    }
-  }
-
-
-  .header__menu.act {
-    top: 0;
-  }
-
-  .header__list {
-    display: block;
-  }
-
-  .header__list li {
-    margin: 0px 0px 5px 0px;
-  }
 }
+
+
 
 
 
@@ -378,7 +318,7 @@ body {
   flex: 1 1 auto;
   /* height: 500px; */
   margin: 100px 100px auto 100px;
-  background-color: rgb(255, 255, 255, 0.5);
+  background-color: rgb(255, 255, 255, 0.7);
   border-radius: 15px;
   color: black;
   font-size: 16px;
@@ -393,15 +333,10 @@ body {
 
 .short {
   float: left;
-  margin: 10px;
-  padding-left: 20px;
+  /* margin: 10px; */
+  padding: 20px 0px 20px 20px;
   width: 38%;
   /* background-color: aliceblue; */
-}
-
-.short h6 {
-  text-align: center;
-  font-weight: bold;
 }
 
 .short p {
@@ -410,24 +345,57 @@ body {
 
 .content {
   float: right;
-  margin: 10px;
-  margin-top: 150px;
-  padding-right: 20px;
+  /* margin: 10px; */
+  /* margin-top: 150px; */
+  padding: 20px 20px 20px 0px;
   width: 58%;
   text-align: justify;
   /* background-color: bisque; */
 }
 
-@media (max-width: 767px) {
+
+/* Adaptive content(background) */
+
+@media (max-width: 1200px) {
+
+
+
+  .short {
+    /* float: left; */
+    /* margin: 10px; */
+    padding: 20px;
+    width: 100%;
+    /* background-color: aliceblue; */
+  }
+
+
+  .content {
+    /* float: right; */
+    /* margin: 10px; */
+    /* margin-top: 150px; */
+    padding: 20px;
+    width: 100%;
+    /* text-align: justify; */
+    /* background-color: bisque; */
+  }
+}
+
+
+
+
+
+
+
+@media (max-width: 800px) {
   .background {
-    padding: 0px 0px 0px 0px;
+    margin: 80px 15px auto 15px;
   }
 }
 
 /*Footer*/
 
 .footer {
-  z-index: 50;
+  z-index: 10;
   margin-top: 100px;
   position: relative;
   left: 0;
@@ -451,6 +419,17 @@ body {
   text-align: right;
   margin-top: 80px;
 }
+
+
+@media (max-width: 800px) {
+  .footer {
+    margin-top: 20px;
+  }
+}
+
+
+
+
 
 
 
@@ -565,6 +544,7 @@ body {
   font-size: 18px;
   padding: 10px;
 }
+
 
 
 
