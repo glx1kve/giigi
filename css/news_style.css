@@ -1,0 +1,308 @@
+/* * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Lato", sans-serif;
+    line-height: 1.25;
+    background-color: #f4f4f4;
+    color: #2a2a2a;
+    font-weight: 500;
+  } */
+
+
+
+
+/*Main content*/
+
+.article-title {
+    margin: 200px auto 0 auto;
+    font-size: 52px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.15);
+    font-family: cursive;
+}
+
+
+.content {
+    flex: 1 1 auto;
+    /* height: 500px; */
+    margin: 200px 100px auto 100px;
+    /* background-color: rgb(255, 255, 255, 0.7); */
+    /* border-radius: 15px; */
+    color: black;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.content__container {
+    /* max-width: 1180px; */
+    /* margin: 0px auto;
+    padding: 0px 10px; */
+    width: 100%;
+    padding: 30px;
+}
+
+.post {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0.1px black;
+}
+
+h1 {
+    text-align: center;
+}
+
+.content button {
+    font-size: 1rem;
+    padding: 0.35em 0.75em;
+    line-height: 1;
+    background-color: transparent;
+    border: 0.125rem solid #2a2a2a;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: 0.1s;
+    outline: 0;
+}
+
+.content button:hover {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.content button .fa {
+    font-size: 0.75em;
+    margin-left: 0.5em;
+}
+
+.content button.btn--primary {
+    border-color: #042A4F;
+    color: #042A4F;
+}
+
+.content button.btn--primary:hover {
+    background-color: #042A4F;
+    color: #fff;
+}
+
+.content button.btn--accent {
+    border-color: #E65891;
+    color: #E65891;
+}
+
+.content button.btn--accent:hover {
+    background-color: #E65891;
+    color: #fff;
+}
+
+
+
+
+.posts {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 2.5rem;
+}
+
+
+@media (max-width: 2500px) {
+    .posts {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2.5rem;
+    }
+
+}
+
+
+
+@media (max-width: 1920px) {
+    .posts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2.5rem;
+    }
+
+}
+
+@media (max-width: 1140px) {
+    .posts {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .article-title {
+        font-size: 42px;
+    }
+
+    .content {
+        margin: 150px 50px auto 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .posts {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .article-title {
+        margin-top: 150px;
+        font-size: 32px;
+    }
+
+    .content {
+        margin: 150px 40px auto 40px;
+    }
+
+
+}
+
+
+@media (max-width: 500px) {
+
+    .article-title {
+        margin-top: 100px;
+        font-size: 24px;
+    }
+
+    .content {
+        margin-top: 80px;
+    }
+
+    .content {
+        margin: 150px 30px auto 30px;
+    }
+}
+
+.post__image {
+    width: 100%;
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.post__image:before,
+.post__image:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.post__image:before {
+    background-size: cover;
+    background-position: center center;
+    transform: scale(1);
+    filter: blur(0);
+    transition: 2s cubic-bezier(0, 0.6, 0.2, 1);
+}
+
+.post__image:after {
+    background: linear-gradient(30deg, #042A4F 0%, #E65891 100%);
+    background-size: 100% 300%;
+    background-position: bottom left;
+    opacity: 0.15;
+    transition: 2s cubic-bezier(0, 0.6, 0.2, 1);
+}
+
+.post__image--1:before {
+    background-image: url("https://images.unsplash.com/photo-1510951459752-aac634df6e86?h=240&ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=50bdf8b5068e794a82c849cc7e269ed3");
+}
+
+.post__image--2:before {
+    background-image: url("https://images.unsplash.com/photo-1529392960549-df4af50eac23?h=240&ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=b482040f9d3a25a5e5352948f68f3a0e");
+}
+
+.post__image--3:before {
+    background-image: url("https://images.unsplash.com/photo-1506258998-82810ddc75a3?h=240&ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=68da264c24bc024a0b2ff92c349e89ed");
+}
+
+.post__image--4:before {
+    background-image: url("https://images.unsplash.com/photo-1520875777965-f99b03dc86e8?h=240&ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=34ff37a297e7e9e7be972356103b6750");
+}
+
+.post__image--5:before {
+    background-image: url("https://images.unsplash.com/photo-1527664557558-a2b352fcf203?h=240&ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=d06ac80d600822cb010987a6af4ff02a");
+}
+
+.post__image--6:before {
+    background-image: url("https://images.unsplash.com/photo-1507679799987-c73779587ccf?h=240&ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=f982b6bf45d8a72d038b60a010e16767");
+}
+
+.post__content {
+    margin: -3rem 1.5rem 0;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 3px;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.15);
+    transition: margin 0.2s ease-in-out;
+    position: relative;
+    z-index: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.post__inside {
+    height: 4.85rem;
+    transition: height 0.2s ease-in-out;
+
+
+    overflow: auto;
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+
+.post__inside::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+
+
+.post__title {
+    font-size: 1.35rem;
+    line-height: 1;
+    margin: 0 0 1rem;
+    font-weight: 300;
+    color: #042A4F;
+}
+
+.post__excerpt {
+    overflow: hidden;
+    margin: 0;
+    max-height: 6.25rem;
+    position: relative;
+}
+
+.post__button {
+    margin-top: 1rem;
+}
+
+/* ====== HOVER ====== */
+.post:hover .post__content {
+    margin-top: -9.8rem;
+}
+
+.post:hover .post__inside {
+    height: 11.65rem;
+}
+
+.post:hover .post__image:after {
+    opacity: 0.5;
+}
+
+.post:hover .post__image:before {
+    transform: scale(1.1);
+    filter: blur(10px);
+}

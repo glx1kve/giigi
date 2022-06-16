@@ -1,15 +1,120 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
-
-body,
-html {
-  width: 100%;
-  height: 100%;
-  background: #ddd;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 99px;
-  text-align: center;
+* {
+    box-sizing: border-box;
+    outline: none;
 }
 
-div {
-  position: absolute;
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: gray;
+}
+
+#sliderWrapper {
+    display: flex;
+}
+
+#sliderWrapper h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 100;
+    color: white;
+    font-size: 3rem;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    mix-blend-mode: overlay;
+}
+
+#sliderWrapper .buttons {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+
+#sliderWrapper .buttons button {
+    display: flex;
+    background-color: transparent;
+    border: none;
+    height: 30px;
+    margin: 20px 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+#sliderWrapper .buttons button svg {
+    fill: white;
+}
+
+#sliderWrapper .buttons button.next {
+    transform: scaleY(-1);
+}
+
+#sliderWrapper .buttons button.prev:active {
+    transform: translateY(8px);
+}
+
+#sliderWrapper .buttons button.next:active {
+    transform: scaleY(-1) translateY(8px);
+}
+
+#sliderWrapper .part {
+    flex: 1;
+}
+
+#sliderWrapper .part .section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#sliderWrapper .part .section img {
+    position: absolute;
+    left: var(--x);
+    width: 100vw;
+    height: 100vh;
+    /* object-fit: cover; */
+    pointer-events: none;
+
+    /* background-position: center center; */
+    /* Фон не повторяется */
+    /* background-repeat: no-repeat; */
+    /* Фон зафиксирован в области просмотра и потому не двигается, когда высота контента превышает высоту изображения */
+    /* background-attachment: fixed; */
+    /* Это свойство заставляет фон менять масштаб при изменении размеров содержащего его контейнера*/
+    /* background-size: cover; */
+}
+
+
+
+
+
+.back-to-main-btn {
+    position: relative;
+    top: -100px;
+    left: 50px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    /* background-color: azure; */
+    align-items: center;
+    justify-content: center;
+    border: 3px solid black;
+    z-index: 10;
+    transition: all 0.3s ease 0s;
+}
+
+.back-to-main-btn img {
+    margin: 4px 4px 0px 4px;
+}
+
+.back-to-main-btn:hover {
+    top: -105px;
 }

@@ -10,6 +10,8 @@
     overflow-y: auto;
     overflow-x: hidden;
     transition: all 0.8s ease 0s;
+
+    z-index: 10;
 }
 
 .popup_settings:target {
@@ -31,7 +33,6 @@
     height: 100%;
     top: 0;
     left: 0;
-
 }
 
 .popup_settings_body {
@@ -41,6 +42,8 @@
     justify-content: center;
     padding: 30px, 10px;
     /*зверху/знизу по 30, справа/зліва по 10 відступи*/
+
+
 }
 
 .popup_settings_content {
@@ -58,7 +61,6 @@
 
     width: 500px;
     height: 500px;
-
 
     box-shadow: 0px 0px 10px 1px;
 }
