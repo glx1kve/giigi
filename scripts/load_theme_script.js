@@ -49,3 +49,5 @@ const getLanguage = () => {
 
 getLanguage();
 
+exports = { getLanguage };
+

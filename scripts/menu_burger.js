@@ -38,7 +38,7 @@ function menu() {
                                                     <nav class="navMenu-burger">
                                                         <li>
 
-                                                            <a href="#" id="lg_features_burger" class="underline-one">Особливості</a>
+                                                            <a href="features.html" id="lg_features_burger" class="underline-one">Особливості</a>
                                                         </li>
                                                         <li>
                                                             <a href="#" id="lg_sub_burger" class="underline-one">Підписки</a>
@@ -49,7 +49,7 @@ function menu() {
 
                                                         </li>
                                                         <li>
-                                                            <a href="#" id="lg_about_burger" class="underline-one">Про нас</a>
+                                                            <a href="about_us.html" id="lg_about_burger" class="underline-one">Про нас</a>
 
                                                         </li>
                                                         <li>
@@ -69,7 +69,7 @@ function menu() {
                                                     <nav class="navMenu-burger">
                                                         <li>
 
-                                                            <a href="#" id="lg_features_burger" class="underline-one">Features</a>
+                                                            <a href="features.html" id="lg_features_burger" class="underline-one">Features</a>
                                                         </li>
                                                         <li>
                                                             <a href="#" id="lg_sub_burger" class="underline-one">Subscriptions</a>
@@ -80,7 +80,7 @@ function menu() {
 
                                                         </li>
                                                         <li>
-                                                            <a href="#" id="lg_about_burger" class="underline-one">About us</a>
+                                                            <a href="about_us.html" id="lg_about_burger" class="underline-one">About us</a>
 
                                                         </li>
                                                         <li>

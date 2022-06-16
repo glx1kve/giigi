@@ -1,6 +1,6 @@
 var language = {
     ua: {
-        article_title: "Новини тижня",
+        // article_title: "Новини тижня",
         lang: "Мова",
         // theme: "Тема",
         features: "Особливості",
@@ -10,8 +10,8 @@ var language = {
         thanks: "Дякую!",
         plunge: "Поринути в GIIGI",
         logo: "Логотип компанії GIIGI",
-        // left_text: "Логотип складається з абревіатури GIIGI, яка має повну назву «Generic Insurrection in Game Industry». Звучить доволі пафосно, але ж не потрібно приховувати правду від поціновувачів. Абревіатура обрамлена, що символізує кордони, в межах яких функціонує компанія.",
-        // right_text: "Компінія GIIGI займається розробкою кросплатфомових ігор в різних жанрах. Головною спеціалізацією є ігри жанру футбольного симулятора. Та впринципі усьо.",
+        left_text: "Логотип складається з абревіатури GIIGI, яка має повну назву «Generic Insurrection in Game Industry». Звучить доволі пафосно, але ж не потрібно приховувати правду від поціновувачів. Абревіатура обрамлена, що символізує кордони, в межах яких функціонує компанія.",
+        right_text: "Компінія GIIGI займається розробкою кросплатфомових ігор в різних жанрах. Головною спеціалізацією є ігри жанру футбольного симулятора. Та впринципі усьо.",
         street: "м. Київ, вул. \\_(-_-)_/, 00000 <br> +38(012)-345-67-89 <br><br> \&copy; GIIGI",
         creators: "Творці",
         plunge: "Поринути в GIIGI",
@@ -31,7 +31,7 @@ var language = {
         settings: "Налаштування",
     },
     en: {
-        article_title: "News of the week",
+        // article_title: "News of the week",
         lang: "Language",
         // theme: "Theme",
         features: "Features",
@@ -41,8 +41,8 @@ var language = {
         thanks: "Thank you!",
         plunge: "Plunge into GIIGI",
         logo: "GIIGI company logo",
-        // left_text: "The logo consists of the abbreviation GIIGI, which has the full name «Generic Insurrection in Game Industry». Sounds pretty pathetic, but we don't have to hide the truth from your fans. The abbreviation is framed, symbolizing the boundaries within which the company operates. The logo also has a background image that is used exclusively for marketing purposes and symbolizes a boundless and fantastic space, just like us xD. In the lower-left corner is a symbol that refers to the once-famous BOTW clan.",
-        // right_text: "GIIGI develops cross-platform games in various genres. The main specialization is games of the football simulator genre. That's all, sir.",
+        left_text: "The logo consists of the abbreviation GIIGI, which has the full name «Generic Insurrection in Game Industry». Sounds pretty pathetic, but we don't have to hide the truth from your fans. The abbreviation is framed, symbolizing the boundaries within which the company operates. The logo also has a background image that is used exclusively for marketing purposes and symbolizes a boundless and fantastic space, just like us xD. In the lower-left corner is a symbol that refers to the once-famous BOTW clan.",
+        right_text: "GIIGI develops cross-platform games in various genres. The main specialization is games of the football simulator genre. That's all, sir.",
         street: "00000, \\_(-_-)_/ street, Kyiv",
         creators: "Creators",
         plunge: "Plunge into GIIGI",
@@ -81,7 +81,7 @@ function Rload(currentLanguage) {
 
     if (currentLanguage === "ua") {
 
-        lg_article_title.textContent = language.ua.article_title;
+        // lg_article_title.textContent = language.ua.article_title;
 
         lg_lang.textContent = language.ua.lang;
         // lg_theme.textContent = language.ua.theme;
@@ -93,8 +93,8 @@ function Rload(currentLanguage) {
         lg_plunge1.textContent = language.ua.plunge;
         lg_plunge2.textContent = language.ua.plunge;
         // lg_logo.textContent = language.ua.logo;
-        // lg_left_text.textContent = language.ua.left_text;
-        // lg_right_text.textContent = language.ua.right_text;
+        lg_left_text.textContent = language.ua.left_text;
+        lg_right_text.textContent = language.ua.right_text;
         lg_street.textContent = language.ua.street;
 
 
@@ -151,7 +151,7 @@ function Rload(currentLanguage) {
 
     } else {
 
-        lg_article_title.textContent = language.en.article_title;
+        // lg_article_title.textContent = language.en.article_title;
 
         lg_lang.textContent = language.en.lang;
         // lg_theme.textContent = language.en.theme;
@@ -163,8 +163,8 @@ function Rload(currentLanguage) {
         lg_plunge1.textContent = language.en.plunge;
         lg_plunge2.textContent = language.en.plunge;
         // lg_logo.textContent = language.en.logo;
-        // lg_left_text.textContent = language.en.left_text;
-        // lg_right_text.textContent = language.en.right_text;
+        lg_left_text.textContent = language.en.left_text;
+        lg_right_text.textContent = language.en.right_text;
         lg_street.textContent = language.en.street;
 
 
