@@ -41,7 +41,7 @@ var language = {
         thanks: "Thank you!",
         plunge: "Plunge into GIIGI",
         logo: "GIIGI company logo",
-        left_text: "The logo consists of the abbreviation GIIGI, which has the full name «Generic Insurrection in Game Industry». Sounds pretty pathetic, but we don't have to hide the truth from your fans. The abbreviation is framed, symbolizing the boundaries within which the company operates. The logo also has a background image that is used exclusively for marketing purposes and symbolizes a boundless and fantastic space, just like us xD. In the lower-left corner is a symbol that refers to the once-famous BOTW clan.",
+        left_text: "The logo consists of the abbreviation GIIGI, which has the full name «Generic Insurrection in Game Industry». Sounds pretty pathetic, but we don't have to hide the truth from your fans. The abbreviation is framed, symbolizing the boundaries within which the company operates.",
         right_text: "GIIGI develops cross-platform games in various genres. The main specialization is games of the football simulator genre. That's all, sir.",
         street: "00000, \\_(-_-)_/ street, Kyiv",
         creators: "Creators",

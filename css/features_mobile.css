@@ -21,7 +21,7 @@ body {
 
 .left-slide {
     height: 100%;
-    width: 35%;
+    width: 100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -50,22 +50,23 @@ body {
     text-align: justify;
 }
 
+/* 
 .right-slide {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 35%;
-    width: 65%;
-    transition: transform 0.7s ease-in-out;
-}
+    height: 10%;
+    /* position: absolute; */
+/* top: 0; */
+/* left: 35%; */
+/* width: 100%; */
+/* transition: transform 0.7s ease-in-out; */
+/* } */
 
-.right-slide>div {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 100%;
-    width: 100%;
-}
+/* .right-slide>div { */
+/* background-repeat: no-repeat; */
+/* background-size: cover; */
+/* background-position: center center; */
+/* height: 100%; */
+/* width: 100%; */
+/* } */
 
 button {
     background-color: #fff;
@@ -86,21 +87,24 @@ button:focus {
 
 .action-buttons button {
     position: absolute;
-    left: 35%;
+    /* left: 88%; */
+    right: 0;
     top: 50%;
     z-index: 100;
 }
 
 .action-buttons .down-button {
-    transform: translateX(-100%);
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
+    transform: translateX(0%);
+    /* border-top-left-radius: 5px; */
+    /* border-bottom-left-radius: 5px; */
+    border-radius: 5px;
 }
 
 .action-buttons .up-button {
     transform: translateY(-100%);
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    /* border-top-right-radius: 5px; */
+    /* border-bottom-right-radius: 5px; */
+    border-radius: 5px;
 }
 
 
@@ -111,6 +115,6 @@ button:focus {
 }
 
 #slide-giigi {
-    width: 400px;
-    margin: 25% 0;
+    width: 40%;
+    /* margin: 25% 0; */
 }

@@ -38,7 +38,7 @@ function menu() {
                                                     <nav class="navMenu-burger">
                                                         <li>
 
-                                                            <a href="features.html" id="lg_features_burger" class="underline-one">Особливості</a>
+                                                            <a href="features_mobile.html" id="lg_features_burger" class="underline-one">Особливості</a>
                                                         </li>
                                                         <li>
                                                             <a href="#" id="lg_sub_burger" class="underline-one">Підписки</a>
@@ -69,7 +69,7 @@ function menu() {
                                                     <nav class="navMenu-burger">
                                                         <li>
 
-                                                            <a href="features.html" id="lg_features_burger" class="underline-one">Features</a>
+                                                            <a href="features_mobile.html" id="lg_features_burger" class="underline-one">Features</a>
                                                         </li>
                                                         <li>
                                                             <a href="#" id="lg_sub_burger" class="underline-one">Subscriptions</a>

@@ -11,35 +11,81 @@
 
 
     <link rel="stylesheet" href="css/features.css">
+    <link rel="stylesheet" href="css/preloader.css">
+
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 
 <body>
 
-    <div id="sliderWrapper">
-        <div class="image"></div>
-        <h1 id="slider-title"></h1>
-        <div class="buttons">
-            <button class="next" onclick="slide(-1)">
-                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
-                    <path
-                        d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z" />
-                </svg>
-            </button>
-            <button class="prev" onclick="slide(1)">
-                <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd">
-                    <path
-                        d="M11 21.883l-6.235-7.527-.765.644 7.521 9 7.479-9-.764-.645-6.236 7.529v-21.884h-1v21.883z" />
-                </svg>
-            </button>
+    <body>
+        <div class="preloader" id="preloader">
+            <div class="loader" id="loader">loading</div>
         </div>
-    </div>
+
+        <div class="slider-container">
+            <div class="left-slide">
+                <div style="background-color: rgb(82, 63, 73)">
+                    <h1 id="lg_blender_title">3D-моделювання</h1>
+                    <p id="lg_blender">Для створення ігрових об'єктів ми використовуємо сучасні програми для моделювання
+                    </p>
+                </div>
+                <div style="background-color: rgb(254, 203, 0)">
+                    <h1 id="lg_unreal_engine_title">Ігровий двигун</h1>
+                    <p id="lg_unreal_engine">Використання повноціного ігрового двигуна надає нашим іграм повноціного
+                        реалізму картинки та
+                        фізики об'єктів</p>
+                </div>
+                <div style="background-color: rgb(62, 123, 213)">
+                    <h1 id="lg_code_title">C++ код</h1>
+                    <p id="lg_code">Пишемо код з використанням підходящих парадигм програмування. Написаний код тестуємо
+                        та
+                        вдосконалюємо до найскладніших завдань щодо гри</p>
+                </div>
+                <div style="background-color: rgb(231, 58, 95)">
+                    <h1 id="lg_rtx_title">RTX</h1>
+                    <p id="lg_rtx">Для своїх творінь використовуємо виключно найпотужніше апаратне забезпечення</p>
+                </div>
+                <div style="background-color: rgb(153, 15, 203)">
+                    <h1 id="lg_giigi_title">Загальна інформація</h1>
+                    <p id="lg_giigi">Ми виокристовуємо найсучасніші технологічні особливості в наших проєктах. Завжди
+                        гарантуємо
+                        якість та надійність</p>
+                </div>
+            </div>
+            <div class="right-slide">
+                <div style="background-color: black;" id="div-slide-giigi"><img src="images/GIIGI_logo_white.png"
+                        id="slide-giigi"></div>
+                <div style="background-image: url('images/rtx.jpg');"></div>
+                <div style="background-image: url('images/code.png');"></div>
+                <div style="background-image: url('images/unreal_engine.png');"></div>
+                <div style="background-image: url('images/blender.png');"></div>
+            </div>
+            <div class="action-buttons">
+                <button class="down-button">
+                    <i class="fas fa-arrow-down"></i>
+                </button>
+                <button class="up-button">
+                    <i class="fas fa-arrow-up"></i>
+                </button>
+            </div>
+        </div>
 
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="js.js"></script>
+    </body>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"></script>
+</html>
 
 
-    <script src="scripts/features.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.1.0/anime.min.js"></script>
+
+
+<script src="scripts/features.js"></script>
+<script src="scripts/lang_features.js"></script>
+<script src="scripts/load_lang.js"></script>
+<script src="scripts/preloader.js"></script>
 </body>
 
 </html>

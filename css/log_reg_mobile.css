@@ -33,7 +33,7 @@
 .log_reg_mobile_form {
     width: 350px;
     height: 500px;
-    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    background: linear-gradient(to bottom, #5e1088, #741083, #24243e);
     /* background: red; */
     overflow: hidden;
     /* background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover; */
@@ -56,7 +56,7 @@
 .input_mobile_form {
     /* background: white; */
     width: 70%;
-    margin: 0 auto;
+    margin: -40px auto;
     text-align: center;
 }
 
@@ -84,8 +84,8 @@
 .signup_mobile button,
 .login_mobile button {
     border-radius: 20px;
-    border: 1px solid #FF4B2B;
-    background-color: #FF4B2B;
+    border: 1px solid #7312a7;
+    background-color: #7312a7;
     color: #FFFFFF;
     font-size: 12px;
     font-weight: bold;
@@ -116,7 +116,7 @@
 
 .login_mobile {
     height: 460px;
-    background: #eee;
+    background: rgb(255, 255, 255);
     border-radius: 60% / 10%;
     transform: translateY(-180px);
     transition: .8s ease-in-out;

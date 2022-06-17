@@ -1,7 +1,7 @@
 html,
 body {
-    background: var(--bg-color);
-    /* background-image: var(--bg-image); */
+    /* background: var(--bg-color); */
+    background-image: var(--bg-image);
     color: var(--text-color);
     transition: all 0.5s ease 0s;
 }
@@ -97,6 +97,20 @@ body {
     transition: all 0.5s ease 0s;
 }
 
+
+
+
+/* log reg form */
+
+.container form {
+    background-color: var(--log_reg_background);
+}
+
+.container a {
+    color: var(--log_reg_color);
+}
+
+
 .settings {
     background-color: var(--settings);
     transition: all 0.5s ease 0s;
@@ -119,10 +133,10 @@ body {
 :root,
 :root.light {
     --preloader: #fff;
-    --preloader_c: Turquoise;
+    --preloader_c: #4C3575;
 
-    /* --bg-image: url(../images/GIIGI-background-white.png); */
-    --bg-color: #fff;
+    --bg-image: url(../images/GIIGI-background-white.png);
+    /* --bg-color: #fff; */
     --text-color: #123;
     --header_bg_color: rgb(255, 255, 255);
     --background: rgba(255, 255, 255, 0.85);
@@ -131,14 +145,20 @@ body {
     --footer_c: white;
 
     --navMenu: black;
-    --navMenu_h: #4D648D;
+    --navMenu_h: #8718c3;
     --underline_after: black;
-    --underline_before: #4D648D;
+    --underline_before: #8718c3;
 
     --button_container: #000;
     --button_container_c: #fff;
     --border_c: #000;
     --mas_c: #000;
+
+
+
+    --log_reg_background: #FFFFFF;
+    --log_reg_color: #333;
+
 
 
     --settings: #770eb4;
@@ -147,16 +167,16 @@ body {
 }
 
 :root.dark {
-    --preloader: #B721FF;
-    --preloader_c: #FBDA61;
+    --preloader: #371B58;
+    --preloader_c: #7858A6;
 
-    /* --bg-image: url(../images/GIIGI-background-purple.png); */
-    --bg-color: linear-gradient(19deg, #B721FF, #B721FF);
+    --bg-image: url(../images/GIIGI-background-purple.png);
+    /* --bg-color: linear-gradient(19deg, #B721FF, #B721FF); */
     --text-color: rgb(255, 255, 255);
-    --header_bg_color: #961bcf;
-    --background: rgba(181, 58, 205, 0.85);
+    --header_bg_color: #371B58;
+    --background: rgba(135, 24, 195, 0.85);
     --background_c: rgb(255, 255, 255);
-    --footer: #cc1bcf;
+    --footer: #371B58;
     --footer_c: rgb(255, 255, 255);
 
     --navMenu: rgb(255, 255, 255);
@@ -164,10 +184,17 @@ body {
     --underline_after: rgb(255, 255, 255);
     --underline_before: #FAFA33;
 
-    --button_container: #cd20f8;
-    --button_container_c: rgb(36, 36, 36);
+    --button_container: #8718c3;
+    --button_container_c: rgb(255, 255, 255);
     --border_c: rgb(0, 0, 0);
     --mas_c: rgb(255, 255, 255);
+
+
+
+    --log_reg_background: #7858A6;
+    --log_reg_color: rgb(255, 255, 255);
+
+
 
     --settings: aliceblue;
     --menu-burger-btn: #ffffff;
@@ -289,16 +316,16 @@ body {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --preloader: #B721FF;
-        --preloader_c: #FBDA61;
+        --preloader: #371B58;
+        --preloader_c: #7858A6;
 
-        /* --bg-image: url(../images/GIIGI-background-purple.png); */
-        --bg-color: linear-gradient(19deg, #B721FF, #B721FF);
+        --bg-image: url(../images/GIIGI-background-purple.png);
+        /* --bg-color: linear-gradient(19deg, #B721FF, #B721FF); */
         --text-color: rgb(255, 255, 255);
-        --header_before: #961bcf;
-        --background: rgba(181, 58, 205, 0.85);
+        --header_bg_color: #371B58;
+        --background: rgba(135, 24, 195, 0.85);
         --background_c: rgb(255, 255, 255);
-        --footer: #cc1bcf;
+        --footer: #371B58;
         --footer_c: rgb(255, 255, 255);
 
         --navMenu: rgb(255, 255, 255);
@@ -306,11 +333,13 @@ body {
         --underline_after: rgb(255, 255, 255);
         --underline_before: #FAFA33;
 
-        --button_container: #cd20f8;
-        --button_container_c: rgb(36, 36, 36);
+        --button_container: #8718c3;
+        --button_container_c: rgb(255, 255, 255);
         --border_c: rgb(0, 0, 0);
         --mas_c: rgb(255, 255, 255);
 
         --settings: aliceblue;
+        --menu-burger-btn: #ffffff;
+        --menuBurger-list: rgb(119, 14, 180);
     }
 }
